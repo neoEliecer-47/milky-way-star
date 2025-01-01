@@ -25,7 +25,7 @@ const CoverflowSlider = () => {
                     style={{ transform: `translateX(${offset * 100}%) rotateY(${offset * -30}deg) scale(${scale})`, zIndex: zIndex, opacity: offset < -2 || offset > 2 ? 0 : 1 }}//hide distant elements
                     onClick={() => handleCLick(index)}
                    >
-                    <img src={imgSrc} alt="planet" />
+                    <img src={imgSrc} alt="planet" style={{ height: '20rem', width: '20rem' }}/>
                     
                    </div>
                )

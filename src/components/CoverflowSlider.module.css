@@ -1,36 +1,48 @@
-.coverflowSlider{
-    width: 80%;
-    height: 400px;
-    margin: auto;
-    perspective: 1000px;/* For 3D effect */
-    overflow: hidden;
-    position: relative;
+.coverflowSlider {
+  width: 80%;
+  height: 400px;
+  
+  margin: auto;
+  perspective: 100px; /* For 3D effect */
+  overflow: hidden;
+  position: relative;
 }
 
 .slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+ 
+  position: relative;
 }
 
-.slide{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: center center;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    cursor: pointer;
-    width: 200px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
 
+.slice img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+.slide.active {
+    cursor: default;
 }

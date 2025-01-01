@@ -1,9 +1,12 @@
 import CoverflowSlider from "./components/CoverflowSlider"
+import styles from './App.module.css'
 
 
 const App = () => {
   return (
-    <CoverflowSlider />
+   <div className={styles.Container}>
+     <CoverflowSlider />
+   </div>
   )
 }
 
