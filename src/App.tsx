@@ -1,8 +1,9 @@
+import CoverflowSlider from "./components/CoverflowSlider"
 
 
 const App = () => {
   return (
-    <div>app here!</div>
+    <CoverflowSlider />
   )
 }
 

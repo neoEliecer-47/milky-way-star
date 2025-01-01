@@ -1,0 +1,36 @@
+.coverflowSlider{
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    perspective: 1000px;/* For 3D effect */
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+}
