@@ -1,9 +1,9 @@
 .coverflowSlider {
   width: 80%;
   height: 400px;
-  
+
   margin: auto;
-  perspective: 100px; /* For 3D effect */
+  perspective: 1000px; /* For 3D effect */
   overflow: hidden;
   position: relative;
 }
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
- 
+
   position: relative;
 }
 
@@ -21,17 +21,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: center;
+  transform-origin: center center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
   width: 350px;
   height: 500px;
+  border-radius: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 10px;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2);
@@ -39,10 +40,10 @@
 }
 
 .slice img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
 .slide.active {
-    cursor: default;
+  cursor: default;
 }
