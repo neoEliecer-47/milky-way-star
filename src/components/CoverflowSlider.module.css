@@ -6,12 +6,15 @@
   perspective: 1000px; /* For 3D effect */
   overflow: hidden;
   position: relative;
+  
+  
 }
 
 .slides {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
 
   position: relative;
