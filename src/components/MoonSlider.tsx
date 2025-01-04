@@ -2,22 +2,28 @@ import { moonsProps } from "../types"
 import styles from './MoonSlider.module.css'
 
 
-const MoonSlider = ({ moons }: moonsProps) => {
-    
+const MoonSlider = ({ moons, animationDuration }: moonsProps) => {
+    const totalMoons = moons.length
+    const radius = 50
   return (
     <div className={styles.sliderContainer}>
-        <div className={styles.sliderCircle}>
-            {moons.map((moon) => (
-                <div key={moon.id} className={styles.sliderImage}>
-                    <img
-                        
+        <div className={styles.sliderCircle} style={{ animationDuration: `${animationDuration}s` }}>
+            {moons.map((moon) => {
+                const angle = (360 / totalMoons) * moon.id;
+                const x = radius * Math.sin((angle * Math.PI) / 180);
+                const y = radius * Math.cos((angle * Math.PI) / 180);
+                
+                return (
+                    <div className={styles.sliderImage} style={{ transform: `translate(${x}px, ${y}px)` }}>
+                        <img
+                        key={moon.id}
                         src={moon.imgSrc}
                         alt="moon"
-                        style={{ height: "2.5rem", width: "2.5rem" }}
+                        style={{ height: "3rem", width: "3rem" }}
                     />
-                    
-                </div>
-            ))}
+                    </div>
+                )
+})}
         </div>
     </div>
   )

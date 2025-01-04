@@ -14,7 +14,7 @@
     bottom: 0;
     top: 40px;
     left: 40%;
-    animation: circular-motion linear 10s infinite;
+    animation: circular-motion linear infinite;
     transform-origin: center;
 }
 

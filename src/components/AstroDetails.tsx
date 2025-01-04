@@ -15,7 +15,7 @@ function buildScale(offset: number) {
 
   return (
     <>
-        {dataAstros.map(({ imgSrc, id, moons }, index) => {
+        {dataAstros.map(({ imgSrc, id, moons, moonsAnimationDuration }, index) => {
           //calculate slide position based on index
           const offset = index - currentIndex;
           const scale =  buildScale(offset)//larger scale for the active slide
@@ -37,20 +37,8 @@ function buildScale(offset: number) {
               }} //hide distant elements
               onClick={() => handleCLick(index)}
             >
-                 {/* {moons && (
-                <div style={{ position: "absolute", top: "50%", left: "50%" }}>
-                    {moons.map((moon) => (
-                    <img
-                        key={moon.id}
-                        src={moon.imgSrc}
-                        alt="moon"
-                        style={{ height: "5rem", width: "5rem" }}
-                    />
-                    ))}
-                </div>
-            )} */}
-            {moons && (
-              <MoonSlider moons={moons} />
+            {moons && moonsAnimationDuration && (
+              <MoonSlider moons={moons} animationDuration={moonsAnimationDuration}/>
             )}
               
               <img

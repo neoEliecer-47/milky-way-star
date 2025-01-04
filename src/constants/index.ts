@@ -10,6 +10,9 @@ import sunImg from "../assets/planets/sun.png";
 
 import titanSaturnImg from "../assets/moon/SaturnMoonTitan.png";
 import enceladusStaurnImg from "../assets/moon/enceladus-saturn.png";
+import europaJupiterImg from "../assets/moon/europa-jupiter.png";
+import ganymedeJupiterImg from "../assets/moon/ganymede-jupiter.png";
+import ioJupiterImg from "../assets/moon/io-jupiter.png";
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
@@ -18,7 +21,16 @@ export const planets: planetsProps[] = [
   { imgSrc: venusImg, id: 2 },
   { imgSrc: earthImg, id: 3 },
   { imgSrc: marsImg, id: 4 },
-  { imgSrc: jupiterImg, id: 5 },
+  {
+    imgSrc: jupiterImg,
+    id: 5,
+    moons: [
+      { imgSrc: europaJupiterImg, id: 0 },
+      { imgSrc: ganymedeJupiterImg, id: 1 },
+      { imgSrc: ioJupiterImg, id: 2 },
+    ],
+    moonsAnimationDuration: 5,
+  },
   {
     imgSrc: saturnImg,
     id: 6,
@@ -26,6 +38,7 @@ export const planets: planetsProps[] = [
       { imgSrc: titanSaturnImg, id: 0 },
       { imgSrc: enceladusStaurnImg, id: 1 },
     ],
+    moonsAnimationDuration: 12,
   },
   { imgSrc: uranusImg, id: 7 },
   { imgSrc: neptuneImg, id: 8 },
