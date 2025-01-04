@@ -1,5 +1,6 @@
 import { dataAstrosProps } from '../types';
 import styles from './CoverflowSlider.module.css'
+import MoonSlider from './MoonSlider';
 
 const AstroDetails = ({ dataAstros, currentIndex, handleCLick }: dataAstrosProps) => {
 
@@ -7,7 +8,7 @@ function buildScale(offset: number) {
     if (offset === -2 || offset === 2) {
         return 0.6;
     }
-    return offset === 0 ? 1 : 0.8;
+    return offset === 0 ? 1.2 : 0.8;
   }
 
 
@@ -27,15 +28,16 @@ function buildScale(offset: number) {
               key={id}
               className={`${styles.slide} ${offset === 0 ? "active" : ""}`}
               style={{
-                transform: `translateX(${offset * 100}%) rotateY(${
+                transform: `translateX(${offset * 75}%) rotateY(${
                   offset * -5
                 }deg) scale(${scale})`,
                 zIndex: zIndex,
                 opacity: offset < -2 || offset > 2 ? 0 : 1,
+                
               }} //hide distant elements
               onClick={() => handleCLick(index)}
             >
-                 {moons && (
+                 {/* {moons && (
                 <div style={{ position: "absolute", top: "50%", left: "50%" }}>
                     {moons.map((moon) => (
                     <img
@@ -46,6 +48,9 @@ function buildScale(offset: number) {
                     />
                     ))}
                 </div>
+            )} */}
+            {moons && (
+              <MoonSlider moons={moons} />
             )}
               
               <img

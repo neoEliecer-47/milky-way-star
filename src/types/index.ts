@@ -4,6 +4,10 @@ export type planetsProps = {
   moons?: planetsProps[];
 };
 
+export type moonsProps = {
+  moons: planetsProps[];
+};
+
 export type dataAstrosProps = {
   dataAstros: planetsProps[];
   currentIndex: number;

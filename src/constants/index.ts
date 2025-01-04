@@ -9,20 +9,24 @@ import neptuneImg from "../assets/planets/neptune.png";
 import sunImg from "../assets/planets/sun.png";
 
 import titanSaturnImg from "../assets/moon/SaturnMoonTitan.png";
+import enceladusStaurnImg from "../assets/moon/enceladus-saturn.png";
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
   { imgSrc: sunImg, id: 0 },
-  { imgSrc: mercuryImg, id: 1 },//should there be anothe array for moons of every planet?
+  { imgSrc: mercuryImg, id: 1 }, //should there be anothe array for moons of every planet?
   { imgSrc: venusImg, id: 2 },
   { imgSrc: earthImg, id: 3 },
   { imgSrc: marsImg, id: 4 },
   { imgSrc: jupiterImg, id: 5 },
-  { imgSrc: saturnImg, id: 6, moons: [{ imgSrc: titanSaturnImg, id: 0 }] },
+  {
+    imgSrc: saturnImg,
+    id: 6,
+    moons: [
+      { imgSrc: titanSaturnImg, id: 0 },
+      { imgSrc: enceladusStaurnImg, id: 1 },
+    ],
+  },
   { imgSrc: uranusImg, id: 7 },
   { imgSrc: neptuneImg, id: 8 },
- 
 ];
-
-
-
