@@ -19,7 +19,8 @@ const MoonSlider = ({ moons, animationDuration }: moonsProps) => {
                         key={moon.id}
                         src={moon.imgSrc}
                         alt="moon"
-                        style={{ height: "3rem", width: "3rem" }}
+                        
+                        className={styles.moonImage}
                     />
                     </div>
                 )

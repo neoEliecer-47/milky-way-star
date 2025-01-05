@@ -37,3 +37,13 @@
     object-fit: cover;
 
 }
+
+.moonImage{
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.3s linear;
+}
+
+.moonImage:hover{
+    transform: scale(1.5);
+}
