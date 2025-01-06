@@ -5,10 +5,7 @@ body {
 }
 
 .space-1{
-    --size: 2px;
-    --space-layer: 
-      4vw 50vh 0 #fff,
-      18vw 88vh #fff;
+
   
     width: var(--size);
     height: var(--size);
@@ -18,4 +15,15 @@ body {
     top: 0;
     left: 0;
     opacity: 75%;
+    animation: stars-dance var(--duration, 9s) linear infinite;
+    transition: transform 500ms linear;
+}
+
+@keyframes stars-dance {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100px);
+    }
 }
