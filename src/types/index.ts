@@ -16,6 +16,14 @@ export type dataAstrosProps = {
   handleCLick: (index: number) => void;
 }
 
+export type spaceLayerProps = {
+  size: string;
+  selector: string;
+  starsLength: number;
+  duration: string;
+};
+
+
 interface moons {
   imgSrc: string;
   id: number;
