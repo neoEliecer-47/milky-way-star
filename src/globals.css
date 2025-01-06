@@ -4,26 +4,3 @@ body {
     margin: 0;
 }
 
-.space-1{
-
-  
-    width: var(--size);
-    height: var(--size);
-    background: #fff;
-    box-shadow: var(--space-layer);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 75%;
-    animation: stars-dance var(--duration, 9s) linear infinite;
-    transition: transform 500ms linear;
-}
-
-@keyframes stars-dance {
-    from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(-100px);
-    }
-}

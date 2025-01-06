@@ -1,3 +1,5 @@
+import React from "react";
+
 export type planetsProps = {
   imgSrc: string;
   id: number;
@@ -18,9 +20,10 @@ export type dataAstrosProps = {
 
 export type spaceLayerProps = {
   size: string;
-  selector: string;
+  selector?: string;
   starsLength: number;
-  duration: string;
+  duration?: string;
+  divRef: React.RefObject<HTMLDivElement>
 };
 
 

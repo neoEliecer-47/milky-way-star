@@ -5,7 +5,8 @@ export function generateSpaceLayer({
   selector,
   starsLength,
   duration,
-}: spaceLayerProps) {
+  divRef
+}: spaceLayerProps): void {
   const layer = [];
 
   for (let i = 0; i < starsLength; i++) {
@@ -14,7 +15,13 @@ export function generateSpaceLayer({
     layer.push(`${x}vw ${y}vh 0 white, ${x}vw ${y + 100}vh 0 white`);
   }
 
-  const container = document?.querySelector(selector) as HTMLElement;
-  container?.style.setProperty("--space-layer", layer.join(","));
-  container?.style.setProperty("--size", size);
+  if(divRef?.current){
+    divRef?.current.style.setProperty("--space-layer", layer.join(","), "important")
+    divRef?.current.style.setProperty("--size", size, "important")
+  }
+
+
+    // container?.style.setProperty("--space-layer", layer.join(","), "important");
+    // container?.style.setProperty("--size", size, "important");
+ 
 }
