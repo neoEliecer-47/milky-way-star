@@ -2,7 +2,7 @@ import { spaceLayerProps } from "../types";
 
 export function generateSpaceLayer({
   size,
-  selector,
+  
   starsLength,
   duration,
   divRef
@@ -16,8 +16,9 @@ export function generateSpaceLayer({
   }
 
   if(divRef?.current){
-    divRef?.current.style.setProperty("--space-layer", layer.join(","), "important")
-    divRef?.current.style.setProperty("--size", size, "important")
+    divRef.current.style.setProperty("--space-layer", layer.join(","), "important")
+    divRef.current.style.setProperty("--size", size, "important")
+    divRef.current.style.setProperty("--duration", duration)
   }
 
 

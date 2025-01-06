@@ -7,7 +7,7 @@ export type planetsProps = {
   moonsAnimationDuration?: number | null;
 };
 
-export type moonsProps = { 
+export type moonsProps = {
   moons: moons[];
   animationDuration?: number;
 };
@@ -16,21 +16,17 @@ export type dataAstrosProps = {
   dataAstros: planetsProps[];
   currentIndex: number;
   handleCLick: (index: number) => void;
-}
+};
 
 export type spaceLayerProps = {
   size: string;
   selector?: string;
   starsLength: number;
-  duration?: string;
-  divRef: React.RefObject<HTMLDivElement>
+  duration: string;
+  divRef: React.RefObject<HTMLDivElement>;
 };
-
 
 interface moons {
   imgSrc: string;
   id: number;
-  
 }
-
-
