@@ -5,11 +5,11 @@ import { generateSpaceLayer } from "./utils";
 import { useEffect, useRef } from "react";
 
 const App = () => {
-  const divRef = useRef<HTMLDivElement | null>(null);
+  const divRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     generateSpaceLayer({
       size: "2px",
-      selector: ".space-1",
+      
       starsLength: 400,
       duration: "5s",
       divRef: divRef,
