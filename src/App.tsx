@@ -6,18 +6,37 @@ import { useEffect, useRef } from "react";
 
 const App = () => {
   const divRef = useRef<HTMLDivElement>(null);
+  const divRef2 = useRef<HTMLDivElement>(null)
+  const divRef3 = useRef<HTMLDivElement>(null)
   useEffect(() => {
+    generateSpaceLayer({
+      size: "1px",
+      
+      starsLength: 500,
+      duration: "12s",
+      divRef: divRef,
+    });
+
     generateSpaceLayer({
       size: "2px",
       
-      starsLength: 400,
-      duration: "5s",
-      divRef: divRef,
+      starsLength: 200,
+      duration: "9s",
+      divRef: divRef2,
+    });
+    generateSpaceLayer({
+      size: "4px",
+      
+      starsLength: 50,
+      duration: "15s",
+      divRef: divRef3,
     });
   }, []);
   return (
     <div className={styles.Container}>
       <div ref={divRef} className="space-1" />
+      <div ref={divRef2} className="space-1"/>
+      <div ref={divRef3} className="space-1"/>
       <CoverflowSlider />
     </div>
   );

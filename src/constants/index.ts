@@ -25,20 +25,22 @@ import hippocampNeptuneMoon from "../assets/moon/hippocamp-neptune-moon.png";
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
-  { imgSrc: sunImg, id: 0 },
-  { imgSrc: mercuryImg, id: 1 }, //should there be anothe array for moons of every planet?
-  { imgSrc: venusImg, id: 2 },
+  { imgSrc: sunImg, id: 0, astroData: [{ name: 'sun'}] },
+  { imgSrc: mercuryImg, id: 1, astroData: [{ name: 'mercury'}] }, //should there be anothe array for moons of every planet?
+  { imgSrc: venusImg, id: 2, astroData: [{ name: 'venus'}] },
   {
     imgSrc: earthImg,
     id: 3,
     moons: [{ imgSrc: moonEarth, id: 0 }],
     moonsAnimationDuration: 15,
+     astroData: [{ name: 'earth'}]
   },
   {
     imgSrc: marsImg,
     id: 4,
     moons: [{ imgSrc: phobosMarsImg, id: 0 }],
-    moonsAnimationDuration: 2,
+    moonsAnimationDuration: 2
+    , astroData: [{ name: 'mars'}]
   },
   {
     imgSrc: jupiterImg,
@@ -49,7 +51,8 @@ export const planets: planetsProps[] = [
       { imgSrc: ioJupiterImg, id: 2 },
       { imgSrc: ganymedeJupiterMoon, id: 3 },
     ],
-    moonsAnimationDuration: 5,
+    moonsAnimationDuration: 5
+    , astroData: [{ name: 'jupiter'}]
   },
   {
     imgSrc: saturnImg,
@@ -59,7 +62,8 @@ export const planets: planetsProps[] = [
       { imgSrc: enceladusStaurnImg, id: 1 },
       { imgSrc: mimasSturnMoon, id: 2 },
     ],
-    moonsAnimationDuration: 12,
+    moonsAnimationDuration: 12
+    , astroData: [{ name: 'saturn'}]
   },
   {
     imgSrc: uranusImg,
@@ -68,7 +72,8 @@ export const planets: planetsProps[] = [
       { imgSrc: titaniaUranusMoon, id: 0 },
       { imgSrc: umbrielUranusMoon, id: 1 },
     ],
-    moonsAnimationDuration: 3,
+    moonsAnimationDuration: 3
+    , astroData: [{ name: 'uranus'}]
   },
   {
     imgSrc: neptuneImg,
@@ -77,6 +82,7 @@ export const planets: planetsProps[] = [
       { imgSrc: tritonNeptuneMoon, id: 1 },
       { imgSrc: hippocampNeptuneMoon, id: 2 },
     ],
-    moonsAnimationDuration: 8,
+    moonsAnimationDuration: 8
+    , astroData: [{ name: 'neptune'}]
   },
 ];

@@ -27,7 +27,7 @@
   transform-origin: center center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
-  width: 350px;
+  /*width: var(--slide-size-width);350px*/
   height: 500px;
   border-radius: 5rem;
   display: flex;

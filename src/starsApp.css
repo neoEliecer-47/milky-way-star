@@ -8,14 +8,14 @@
   left: 0;
   opacity: 75%;
   animation: stars-dance var(--duration) linear infinite;
-  transition: transform 500ms linear;
+  transition: transform 2s linear;
 }
 
 @keyframes stars-dance {
   from {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   to {
-    transform: translateY(-100vh);
+    transform: translateX(-100vh);
   }
 }

@@ -3,8 +3,9 @@ import React from "react";
 export type planetsProps = {
   imgSrc: string;
   id: number;
-  moons?: planetsProps[];
+  moons?: moons[];
   moonsAnimationDuration?: number | null;
+  astroData: astroData[]
 };
 
 export type moonsProps = {
@@ -29,4 +30,14 @@ export type spaceLayerProps = {
 interface moons {
   imgSrc: string;
   id: number;
+}
+
+interface astroData {
+  name: string;
+  type?: string;
+  concept?: string;
+  composition?: string;
+  temperature?: number;
+  size?: number;
+
 }
