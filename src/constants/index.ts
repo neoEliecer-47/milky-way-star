@@ -25,64 +25,64 @@ import hippocampNeptuneMoon from "../assets/moon/hippocamp-neptune-moon.png";
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
-  { imgSrc: sunImg, id: 0, astroData: [{ name: 'sun'}] },
-  { imgSrc: mercuryImg, id: 1, astroData: [{ name: 'mercury'}] }, //should there be anothe array for moons of every planet?
-  { imgSrc: venusImg, id: 2, astroData: [{ name: 'venus'}] },
+  { imgSrc: sunImg, id: 0, astroData: [{ name: "sun" }] },
+  { imgSrc: mercuryImg, id: 1, astroData: [{ name: "mercury" }] }, //should there be anothe array for moons of every planet?
+  { imgSrc: venusImg, id: 2, astroData: [{ name: "venus" }] },
   {
     imgSrc: earthImg,
     id: 3,
-    moons: [{ imgSrc: moonEarth, id: 0 }],
-    moonsAnimationDuration: 15,
-     astroData: [{ name: 'earth'}]
+    moons: [{ imgSrc: moonEarth, id: 0, alt: "moon" }],
+    moonsAnimationDuration: 20,
+    astroData: [{ name: "earth" }],
   },
   {
     imgSrc: marsImg,
     id: 4,
-    moons: [{ imgSrc: phobosMarsImg, id: 0 }],
-    moonsAnimationDuration: 2
-    , astroData: [{ name: 'mars'}]
+    moons: [{ imgSrc: phobosMarsImg, id: 0, alt: "phobos" }],
+    moonsAnimationDuration: 3,
+    astroData: [{ name: "mars" }],
   },
   {
     imgSrc: jupiterImg,
     id: 5,
     moons: [
-      { imgSrc: europaJupiterImg, id: 0 },
-      { imgSrc: callistoJupiterImg, id: 1 },
-      { imgSrc: ioJupiterImg, id: 2 },
-      { imgSrc: ganymedeJupiterMoon, id: 3 },
+      { imgSrc: europaJupiterImg, id: 0, alt: "europa" },
+      { imgSrc: callistoJupiterImg, id: 1, alt: "callisto" },
+      { imgSrc: ioJupiterImg, id: 2, alt: "io" },
+      { imgSrc: ganymedeJupiterMoon, id: 3, alt: "ganymede" },
     ],
-    moonsAnimationDuration: 5
-    , astroData: [{ name: 'jupiter'}]
+    moonsAnimationDuration: 8,
+    astroData: [{ name: "jupiter" }],
   },
   {
     imgSrc: saturnImg,
     id: 6,
     moons: [
-      { imgSrc: titanSaturnImg, id: 0 },
-      { imgSrc: enceladusStaurnImg, id: 1 },
-      { imgSrc: mimasSturnMoon, id: 2 },
+      { imgSrc: titanSaturnImg, id: 0, alt: "titan" },
+      { imgSrc: enceladusStaurnImg, id: 1, alt: "enceladus" },
+      { imgSrc: mimasSturnMoon, id: 2, alt: "mimas" },
     ],
-    moonsAnimationDuration: 12
-    , astroData: [{ name: 'saturn'}]
+    moonsAnimationDuration: 16,
+    astroData: [{ name: "saturn" }],
   },
   {
     imgSrc: uranusImg,
     id: 7,
     moons: [
-      { imgSrc: titaniaUranusMoon, id: 0 },
-      { imgSrc: umbrielUranusMoon, id: 1 },
+      { imgSrc: titaniaUranusMoon, id: 0, alt: "titania" },
+      { imgSrc: umbrielUranusMoon, id: 1, alt: "umbriel" },
     ],
-    moonsAnimationDuration: 3
-    , astroData: [{ name: 'uranus'}]
+    moonsAnimationDuration: 5,
+    astroData: [{ name: "uranus" }],
   },
   {
     imgSrc: neptuneImg,
     id: 8,
     moons: [
-      { imgSrc: tritonNeptuneMoon, id: 1 },
-      { imgSrc: hippocampNeptuneMoon, id: 2 },
+      { imgSrc: tritonNeptuneMoon, id: 1, alt: "triton" },
+      { imgSrc: hippocampNeptuneMoon, id: 2, alt: "hippocamp" },
     ],
-    moonsAnimationDuration: 8
-    , astroData: [{ name: 'neptune'}]
+    moonsAnimationDuration: 25,
+    astroData: [{ name: "neptune" }],
   },
 ];
