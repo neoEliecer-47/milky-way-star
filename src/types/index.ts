@@ -30,6 +30,7 @@ export type spaceLayerProps = {
 interface moons {
   imgSrc: string;
   id: number;
+  alt: string;
 }
 
 interface astroData {
