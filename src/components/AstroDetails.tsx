@@ -23,15 +23,15 @@ const AstroDetails = ({
           const scale = buildScale(offset); //larger scale for the active slide
           const zIndex = offset === 0 ? 10 : 5; //higher z-index for the active slide
           function buildSize(property: string) {
-            if (astroData[0].name === "sun" && property === "img")
+            const condition = astroData[0].name === 'sun'
+            
+            if (condition && property === "img")
               return "33rem";
             else if (property === "img") return "20rem";
 
-           
+           if(condition && property === 'width') return '430px'
+           else '350px'
 
-            if (astroData[0].name === "sun" && property === "width")
-              return "430px";
-            else if (property === "width") "350px";
           }
           return (
             <>
@@ -45,7 +45,7 @@ const AstroDetails = ({
                   zIndex: zIndex,
                   opacity: offset < -2 || offset > 2 ? 0 : 1,
                   
-                  width: buildSize("width"),
+                  width: buildSize('width')
                 }} //hide distant elements
                 onClick={() => handleCLick(index)}
               >

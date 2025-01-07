@@ -12,7 +12,7 @@ const App = () => {
     generateSpaceLayer({
       size: "1px",
       
-      starsLength: 500,
+      starsLength: 600,
       duration: "12s",
       divRef: divRef,
     });
@@ -20,14 +20,14 @@ const App = () => {
     generateSpaceLayer({
       size: "2px",
       
-      starsLength: 200,
+      starsLength: 300,
       duration: "9s",
       divRef: divRef2,
     });
     generateSpaceLayer({
-      size: "4px",
+      size: "5px",
       
-      starsLength: 50,
+      starsLength: 60,
       duration: "15s",
       divRef: divRef3,
     });

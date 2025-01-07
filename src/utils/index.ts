@@ -13,8 +13,8 @@ export function generateSpaceLayer({
 
   for (let i = 0; i < starsLength; i++) {
     const color = COLORS[Math.floor(Math.random() * COLORS.length)]
-    const x = Math.floor(Math.random() * 100);
-    const y = Math.floor(Math.random() * 100);
+    const x = Math.floor(Math.random() * 200);
+    const y = Math.floor(Math.random() * 200);
     layer.push(`${x}vw ${y}vh 0 ${color}, ${x + 100}vw ${y}vh 0 ${color}`);
   }
 
