@@ -1,5 +1,6 @@
 import { dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
+import CustomButton from "./CustomButton";
 import MoonSlider from "./MoonSlider";
 
 const AstroDetails = ({
@@ -61,6 +62,7 @@ const AstroDetails = ({
                   alt="planet"
                   style={{ height: buildSize("img"), width: buildSize("img") }}
                 />
+                <CustomButton text="Planet"/>
               </div>
             </>
           );
