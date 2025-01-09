@@ -1,5 +1,4 @@
 .buttonContainer {
-  
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -8,47 +7,63 @@
   height: 2.2rem;
   width: 6rem;
   text-transform: capitalize;
-
+  transition: all 200ms linear;
   border: none;
-  
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.buttonContainer::before, .buttonContainer::after {
-    
-    content: "";
-     position: absolute;
+.buttonContainer::before,
+.buttonContainer::after {
+  content: "";
+  position: absolute;
   height: 100%;
   width: 100%;
   top: 50%;
   left: 50%;
- 
-  background: conic-gradient(from var(--angle),#ff4545, #006aff, #7b00ff, #ff6a00);
+  
+  background: conic-gradient(
+    from var(--angle),    #ff4545,
+    #d432e0,
+    #7b00ff,
+    #ff6a00
+  );
   translate: -50% -50%; /* first one is X and second one is Y */
   animation: colors 2s linear infinite;
   z-index: -1;
-  padding: 0.3rem;
-  background-size: 200% 200%;
+  padding: 0.2rem;
+  opacity: 1;
   border-radius: 10px;
- 
+  filter: blur(5px);
 }
 
-.buttonContainer::before{
-    filter: blur(1.5rem);
+.buttonContainer::before {
+  /* we could set opacity value below here to make the colors  less shiny */
+  filter: blur(1.5rem);
+}
+
+.buttonContainer:hover{
+    z-index: 0;
+    color: white;
+    transform: scale(1.08);
+}
+
+.buttonContainer:hover::before{
+  opacity: 0;
+  filter: blur(0px);
 }
 
 
 
 @keyframes colors {
-from {
-    --angle: 0deg
+  from {
+    --angle: 0deg;
   }
   to {
-    --angle: 360deg
+    --angle: 360deg;
   }
 }

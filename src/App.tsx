@@ -35,6 +35,7 @@ const App = () => {
       <div ref={divRef} className="space-1" />
       <div ref={divRef2} className="space-1" />
       <div ref={divRef3} className="space-1" />
+      
       <CoverflowSlider />
     </div>
   );
