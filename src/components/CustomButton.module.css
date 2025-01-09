@@ -1,42 +1,37 @@
-.buttonContainer{
-    width: 200px;
-    height: 100px;
-   
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, #ff6a00, #ee0979, #7b00ff);
-    background-size: 300% 300%;
-    animation: gradient 1.5s linear infinite;
+.buttonContainer {
+  width: 200px;
+  height: 100px;
+    border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  
 }
 
-.buttonContainer::before{
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #222;
-    border-radius: 5px;
-    margin: 2px;
-    z-index: 1;
-}
-
-.buttonContainer span{
-    position: relative;
-    color: #fff;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
+.buttonContainer::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background: red;
+  translate: -50% -50%; /* first one is X and second one is Y */
+  z-index: -1;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 @keyframes gradient {
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
