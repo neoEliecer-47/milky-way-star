@@ -63,7 +63,7 @@ const AstroDetails = ({
                   style={{ height: buildSize("img"), width: buildSize("img"), position: 'relative', zIndex: '-2' }}
                 />
                 <div style={{ margin: '0px', padding: '0px', position: 'absolute', bottom: moons? 55 : 135 }}>
-                  <CustomButton text="Planet"/>
+                  <CustomButton text={astroData[0].name}/>
                 </div>
               </div>
             </>
