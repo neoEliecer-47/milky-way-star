@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import "./starsApp.css";
 import { generateSpaceLayer } from "./utils";
 import { useEffect, useRef } from "react";
+import CustomButton from "./components/CustomButton";
 
 const App = () => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -34,6 +35,7 @@ const App = () => {
       <div ref={divRef} className="space-1" />
       <div ref={divRef2} className="space-1" />
       <div ref={divRef3} className="space-1" />
+      
       <CoverflowSlider />
     </div>
   );
