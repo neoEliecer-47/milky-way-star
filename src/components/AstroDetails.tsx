@@ -24,15 +24,13 @@ const AstroDetails = ({
           const scale = buildScale(offset); //larger scale for the active slide
           const zIndex = offset === 0 ? 10 : 5; //higher z-index for the active slide
           function buildSize(property: string) {
-            const condition = astroData[0].name === 'sun'
-            
-            if (condition && property === "img")
-              return "33rem";
+            const condition = astroData[0].name === "sun";
+
+            if (condition && property === "img") return "33rem";
             else if (property === "img") return "20rem";
 
-           if(condition && property === 'width') return '430px'
-           else '350px'
-
+            if (condition && property === "width") return "430px";
+            else "350px";
           }
           return (
             <>
@@ -45,8 +43,8 @@ const AstroDetails = ({
                   }deg) scale(${scale})`,
                   zIndex: zIndex,
                   opacity: offset < -2 || offset > 2 ? 0 : 1,
-                  
-                  width: buildSize('width')
+
+                  width: buildSize("width"),
                 }} //hide distant elements
                 onClick={() => handleCLick(index)}
               >
@@ -60,10 +58,24 @@ const AstroDetails = ({
                 <img
                   src={imgSrc}
                   alt="planet"
-                  style={{ height: buildSize("img"), width: buildSize("img"), position: 'relative', zIndex: '-2' }}
+                  style={{
+                    height: buildSize("img"),
+                    width: buildSize("img"),
+                    position: "relative",
+                    zIndex: "-2",
+                  }}
                 />
-                <div style={{ margin: '0px', padding: '0px', position: 'absolute', bottom: moons? 55 : 135 }}>
-                  <CustomButton text={astroData[0].name}/>
+                <div
+                  style={{
+                    margin: "0px",
+                    padding: "0px",
+                    position: "absolute",
+                    bottom: moons ? 55 : 135,
+                  }}
+                >
+                 <section className={styles.containerCustomButton}>
+                  <CustomButton text={astroData[0].name} />
+                 </section>
                 </div>
               </div>
             </>

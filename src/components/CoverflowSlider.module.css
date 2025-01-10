@@ -42,11 +42,31 @@
   backdrop-filter: blur(2px);
 }
 
-.slice img {
+.slide::after{
+  position: absolute;
+  content: '';
   width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
+  height: 50%;
+  background: linear-gradient(transparent, #1f1e1e 70%);
+  bottom: -6rem;
+  opacity: 0;
+  z-index: -2;
+  transition: all 1s ease;
 }
-.slide.active {
-  cursor: default;
+.slide:hover::after{
+  opacity: 1;
+  bottom: 0;
+}
+.containerCustomButton{
+  margin: 0;
+  padding: 0;
+  translate: 0 6rem;
+  
+  transition: opacity, translate 400ms ease;
+}
+
+.slide:hover .containerCustomButton{
+  display: flex;
+  opacity: 1;
+  translate: 0 0;
 }

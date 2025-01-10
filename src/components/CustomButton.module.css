@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  
   align-items: center;
   height: 2.2rem;
   width: 6rem;
@@ -35,10 +36,10 @@
   translate: -50% -50%; /* first one is X and second one is Y */
   animation: colors 2s linear infinite;
   z-index: -1;
-  padding: 0.23rem;
+  padding: 0.15rem;
   opacity: 1;
   border-radius: 10px;
-  filter: blur(3px);
+  filter: blur(5px);
 }
 
 .buttonContainer:hover {
