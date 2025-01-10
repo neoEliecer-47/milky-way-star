@@ -7,7 +7,7 @@
   height: 2.2rem;
   width: 6rem;
   text-transform: capitalize;
-  transition: all 200ms linear;
+  transition: color, transform 150ms linear;
   border: none;
 }
 
@@ -17,17 +17,17 @@
   inherits: false;
 }
 
-.buttonContainer::before,
-.buttonContainer::after {
+.buttonContainer::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   top: 50%;
   left: 50%;
-  
+
   background: conic-gradient(
-    from var(--angle),    #ff4545,
+    from var(--angle),
+    #ff4545,
     #d432e0,
     #7b00ff,
     #ff6a00
@@ -35,29 +35,21 @@
   translate: -50% -50%; /* first one is X and second one is Y */
   animation: colors 2s linear infinite;
   z-index: -1;
-  padding: 0.2rem;
+  padding: 0.23rem;
   opacity: 1;
   border-radius: 10px;
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
-.buttonContainer::before {
-  /* we could set opacity value below here to make the colors  less shiny */
-  filter: blur(1.5rem);
+.buttonContainer:hover {
+  color: white;
+  transform: scale(1.08);
+  font-weight: 700;
 }
 
-.buttonContainer:hover{
-    z-index: 0;
-    color: white;
-    transform: scale(1.08);
-}
-
-.buttonContainer:hover::before{
-  opacity: 0;
+.buttonContainer:hover::before {
   filter: blur(0px);
 }
-
-
 
 @keyframes colors {
   from {
