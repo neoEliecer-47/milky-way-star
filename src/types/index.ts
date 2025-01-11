@@ -28,10 +28,10 @@ export type spaceLayerProps = {
 };
 
 export type modalAstroDetailsProps = {
-  astroData: astroData[],
+  astroData: astroData,
   isOpen: boolean,
   toggleModal: React.Dispatch<React.SetStateAction<boolean>>,
-  id: number
+  index: number
 }
 
 interface moons {
@@ -40,7 +40,7 @@ interface moons {
   alt: string;
 }
 
-interface astroData {
+export interface astroData {
   name: string;
   type?: string;
   concept?: string;

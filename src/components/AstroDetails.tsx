@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { dataAstrosProps } from "../types";
+import { useState } from "react";
+import { astroData, dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
 import MoonSlider from "./MoonSlider";
@@ -12,8 +12,13 @@ const AstroDetails = ({
 }: dataAstrosProps) => {
   
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [data, setData] = useState<astroData[]>()
 
-  function toggleModal(){
+  function toggleModal(idAstro: number){
+    const planetsData = dataAstros.filter(({ id })=>(
+      id === idAstro
+    ))
+    setData(planetsData[0].astroData)
     setIsOpen(!isOpen)
   }
   
@@ -26,6 +31,9 @@ const AstroDetails = ({
 
   return (
     <>
+      {isOpen && (
+                <ModalAstroDetails isOpen={isOpen} astroData={data} toggleModal={setIsOpen}/>
+              )}
       {dataAstros.map(
         ({ imgSrc, id, moons, moonsAnimationDuration, astroData }, index) => {
           //calculate slide position based on index
@@ -41,7 +49,7 @@ const AstroDetails = ({
             if (condition && property === "width") return "430px";
             else "350px";
           }
-
+         
           return (
             <>
               <div
@@ -84,15 +92,13 @@ const AstroDetails = ({
                     bottom: moons ? 55 : 135,
                   }}
                 >
-                  <section className={styles.containerCustomButton} onClick={toggleModal}>
+                  <section className={styles.containerCustomButton} onClick={()=>toggleModal(id)}>
                     <CustomButton text={astroData[0].name} />
                   </section>
                 </div>
                 
               </div>
-              {isOpen && (
-                <ModalAstroDetails isOpen={isOpen} astroData={astroData} id={id} toggleModal={setIsOpen}/>
-              )}
+              
             </>
           );
         }

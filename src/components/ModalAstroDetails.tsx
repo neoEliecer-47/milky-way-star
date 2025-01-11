@@ -1,14 +1,17 @@
+import { useRef } from 'react'
 import { modalAstroDetailsProps } from '../types'
 import styles from './ModalAstroDetails.module.css'
 
-const ModalAstroDetails = ({ astroData, isOpen, toggleModal, id }: modalAstroDetailsProps) => {
+const ModalAstroDetails = ({ astroData, isOpen, toggleModal }: modalAstroDetailsProps) => {
 
     //const name = astroData[id]?.name
-    console.log(astroData)
+  const initialData = useRef(astroData)
+  console.log(initialData.current)
+    
   return (
     <article className={styles.modalContainer}>
-        
-            <div>asdasdas</div>
+        <h1 style={{ color: 'black' }}>ggggg</h1>
+            {initialData.current.name}
         
     </article>
   )
