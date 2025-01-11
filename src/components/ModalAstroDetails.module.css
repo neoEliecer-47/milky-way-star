@@ -1,0 +1,7 @@
+.modalContainer{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    height: 10rem;
+    width: 10rem;
+}
