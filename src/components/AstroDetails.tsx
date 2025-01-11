@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
@@ -32,6 +33,7 @@ const AstroDetails = ({
             if (condition && property === "width") return "430px";
             else "350px";
           }
+
           return (
             <>
               <div
@@ -57,12 +59,13 @@ const AstroDetails = ({
 
                 <img
                   src={imgSrc}
-                  alt="planet"
+                  alt={astroData[id]?.name}
                   style={{
                     height: buildSize("img"),
                     width: buildSize("img"),
                     position: "relative",
                     zIndex: "-2",
+                    marginTop: !moons ? '5rem' : ''
                   }}
                 />
                 <div
@@ -73,9 +76,9 @@ const AstroDetails = ({
                     bottom: moons ? 55 : 135,
                   }}
                 >
-                 <section className={styles.containerCustomButton}>
-                  <CustomButton text={astroData[0].name} />
-                 </section>
+                  <section className={styles.containerCustomButton}>
+                    <CustomButton text={astroData[0].name} />
+                  </section>
                 </div>
               </div>
             </>

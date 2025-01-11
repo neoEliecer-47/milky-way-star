@@ -1,3 +1,7 @@
+:root {
+  --position-no-moons: 9rem;
+  --position-moons: 6rem;
+}
 .coverflowSlider {
   width: 80%;
   height: 400px;
@@ -6,8 +10,6 @@
   perspective: 1000px; /* For 3D effect */
   overflow: hidden;
   position: relative;
-  
-  
 }
 
 .slides {
@@ -27,7 +29,7 @@
   transform-origin: center center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
-  
+
   height: 500px;
   border-radius: 5rem;
   display: flex;
@@ -42,31 +44,28 @@
   backdrop-filter: blur(2px);
 }
 
-.slide::after{
+.slide::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
-  height: 50%;
+  height: 80%;
   background: linear-gradient(transparent, #1f1e1e 70%);
   bottom: -6rem;
   opacity: 0;
   z-index: -2;
-  transition: all 1s ease;
+  transition: all 1.2s ease;
 }
-.slide:hover::after{
+.slide:hover::after {
   opacity: 1;
   bottom: 0;
 }
-.containerCustomButton{
+.containerCustomButton {
   margin: 0;
   padding: 0;
-  translate: 0 6rem;
-  
-  transition: opacity, translate 400ms ease;
+  transform: translateY(11rem);
+  transition: transform 450ms ease;
 }
 
-.slide:hover .containerCustomButton{
-  display: flex;
-  opacity: 1;
-  translate: 0 0;
+.slide:hover .containerCustomButton {
+  transform: translateY(-2rem);
 }
