@@ -1,9 +1,15 @@
+import { modalAstroDetailsProps } from '../types'
 import styles from './ModalAstroDetails.module.css'
 
-const ModalAstroDetails = () => {
+const ModalAstroDetails = ({ astroData, isOpen, toggleModal, id }: modalAstroDetailsProps) => {
+
+    //const name = astroData[id]?.name
+    console.log(astroData)
   return (
     <article className={styles.modalContainer}>
-        MODAL
+        
+            <div>asdasdas</div>
+        
     </article>
   )
 }

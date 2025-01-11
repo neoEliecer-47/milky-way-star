@@ -1,14 +1,22 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
 import MoonSlider from "./MoonSlider";
+import ModalAstroDetails from "./ModalAstroDetails";
 
 const AstroDetails = ({
   dataAstros,
   currentIndex,
   handleCLick,
 }: dataAstrosProps) => {
+  
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  function toggleModal(){
+    setIsOpen(!isOpen)
+  }
+  
   function buildScale(offset: number) {
     if (offset === -2 || offset === 2) {
       return 0.6;
@@ -76,11 +84,15 @@ const AstroDetails = ({
                     bottom: moons ? 55 : 135,
                   }}
                 >
-                  <section className={styles.containerCustomButton}>
+                  <section className={styles.containerCustomButton} onClick={toggleModal}>
                     <CustomButton text={astroData[0].name} />
                   </section>
                 </div>
+                
               </div>
+              {isOpen && (
+                <ModalAstroDetails isOpen={isOpen} astroData={astroData} id={id} toggleModal={setIsOpen}/>
+              )}
             </>
           );
         }

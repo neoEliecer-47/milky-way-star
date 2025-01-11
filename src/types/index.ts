@@ -27,6 +27,13 @@ export type spaceLayerProps = {
   divRef: React.RefObject<HTMLDivElement>;
 };
 
+export type modalAstroDetailsProps = {
+  astroData: astroData[],
+  isOpen: boolean,
+  toggleModal: React.Dispatch<React.SetStateAction<boolean>>,
+  id: number
+}
+
 interface moons {
   imgSrc: string;
   id: number;
