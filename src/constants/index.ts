@@ -76,15 +76,17 @@ export const planets: planetsProps[] = [
         type: "Terrestial rocky planet",
         position: 2,
         size: "about 12,104 kilometers - slightly smaller than Earth",
-        mass: 'roughly 80% of Earth mass',
+        mass: "roughly 80% of Earth mass",
         temperature: 475,
-        facts: 'Venus is our closest planetary neighbor. Its the hottest planet in our solar system',
-        surface: 'Volcanic plains, mountains, craters, and vast lava flows',
-        Atmosphere: 'thick and composed mostly of carbon dioxide and nitrogen, with clouds of sulfuric acid',
+        facts:
+          "Venus is our closest planetary neighbor. Its the hottest planet in our solar system",
+        surface: "Volcanic plains, mountains, craters, and vast lava flows",
+        Atmosphere:
+          "thick and composed mostly of carbon dioxide and nitrogen, with clouds of sulfuric acid",
         orbitalPeriod: 225,
         rotation: 243,
         dayNightCycle: 60,
-        age: 4.6
+        age: 4.6,
       },
     ],
   },
@@ -93,14 +95,51 @@ export const planets: planetsProps[] = [
     id: 3,
     moons: [{ imgSrc: moonEarth, id: 0, alt: "moon" }],
     moonsAnimationDuration: 20,
-    astroData: [{ name: "earth" }],
+    astroData: [
+      {
+        name: "earth",
+        type: "terrestial rocky planet",
+        position: 3,
+        size: "Aproximately 12.742 kilometers",
+        mass: "about 5.97 x 10~24 kilograms",
+        temperature: 14,
+        facts:
+          "Earth is the only planet that support life due to its liquid water, atmosphere,and suitable climate.",
+        surface: "71% covered by water, 29% land",
+        Atmosphere:
+          "composed mainly of nitrogen and oxygen, with traces of other gases like carbon dioxide and argon.",
+        orbitalPeriod: 365,
+        rotation: 24,
+        dayNightCycle: 12,
+        age: 4.5,
+      },
+    ],
   },
   {
     imgSrc: marsImg,
     id: 4,
     moons: [{ imgSrc: phobosMarsImg, id: 0, alt: "phobos" }],
     moonsAnimationDuration: 3,
-    astroData: [{ name: "mars" }],
+    astroData: [
+      {
+        name: "mars",
+        type: "terrestrial rocky planet",
+        position: 4,
+        size: "about 6,779 kilometers - roughly half the size of earth",
+        mass: "about 10.7% of Earth mass",
+        dayTemperature: -125,
+        nightTemperature: -195,
+        facts:
+          "evidence suggests Mars once had flowing water and a thicker atmosphere.",
+        surface:
+          "reddish due to iron oxide in the soil and polar ice caps composed of water ice and frozen carbon dioxide",
+        Atmosphere:
+          "thin atmosphere composed mainly of carbon dioxide, nitrogen and argon",
+        orbitalPeriod: 687,
+        rotation: 24.3,
+        age: 4.6,
+      },
+    ],
   },
   {
     imgSrc: jupiterImg,
@@ -112,7 +151,23 @@ export const planets: planetsProps[] = [
       { imgSrc: ganymedeJupiterMoon, id: 3, alt: "ganymede" },
     ],
     moonsAnimationDuration: 8,
-    astroData: [{ name: "jupiter" }],
+    astroData: [
+      {
+        name: "jupiter",
+        type: "gas giant",
+        position: 5,
+        mass: "about 318 times the mass of Earth",
+        size: "about 139,820 kilometers - 11 times wider than Earth",
+        temperature: -145,
+        facts:
+          "the planet immebse gravity helps shield the inner solar system from asteroid impacts by capturing or deflecting them",
+        surface: 'jupiter lacks a solid surface, primarily hydrogen and helium with trace amounuts of methane',
+        Atmosphere: 'known for its colorful cloud bands, violent storms and the iconic Great Red Spot',
+        orbitalPeriod: 11.86,
+        rotation: 9,
+        age: 4.6
+      },
+    ],
   },
   {
     imgSrc: saturnImg,
