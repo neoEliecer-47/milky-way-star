@@ -161,11 +161,13 @@ export const planets: planetsProps[] = [
         temperature: -145,
         facts:
           "the planet immebse gravity helps shield the inner solar system from asteroid impacts by capturing or deflecting them",
-        surface: 'jupiter lacks a solid surface, primarily hydrogen and helium with trace amounuts of methane',
-        Atmosphere: 'known for its colorful cloud bands, violent storms and the iconic Great Red Spot',
+        surface:
+          "jupiter lacks a solid surface, primarily hydrogen and helium with trace amounuts of methane",
+        Atmosphere:
+          "known for its colorful cloud bands, violent storms and the iconic Great Red Spot",
         orbitalPeriod: 11.86,
         rotation: 9,
-        age: 4.6
+        age: 4.6,
       },
     ],
   },
@@ -178,7 +180,27 @@ export const planets: planetsProps[] = [
       { imgSrc: mimasSturnMoon, id: 2, alt: "mimas" },
     ],
     moonsAnimationDuration: 16,
-    astroData: [{ name: "saturn" }],
+    astroData: [
+      {
+        name: "saturn",
+        type: "gas giant",
+        position: 6,
+        mass: "5.68 x 10~26 kg - 95 times the mass of the Earth",
+        temperature: -178,
+        facts:
+          "Saturn is the second largest in the solar system and its known for its rings, moons and other unique features",
+        surface:
+          "no solid surface, a dense atmosphere transitions to liquid and metalic hydrogen layers",
+        Atmosphere: "composed primarily of hydrogen and helium",
+        orbitalPeriod: 29.5,
+        rotation: 10.7,
+        age: 4.5,
+        ringSystem:
+          "the most extensive and visible ring system in the Solar System, made of ice, rock and dust",
+        weather:
+          "extremely strong winds and storms, with some speeds reaching 1,800 km/h",
+      },
+    ],
   },
   {
     imgSrc: uranusImg,
@@ -188,7 +210,27 @@ export const planets: planetsProps[] = [
       { imgSrc: umbrielUranusMoon, id: 1, alt: "umbriel" },
     ],
     moonsAnimationDuration: 5,
-    astroData: [{ name: "uranus" }],
+    astroData: [
+      {
+        name: "uranus",
+        type: "ice giant",
+        position: 7,
+        mass: "14.5 times the mass of the earth",
+        temperature: -224,
+        facts:
+          "Uranus is a very cold and windy world. its surrounded by 13 faint rings and 28 small moons",
+        surface:
+          "uranus does not have a true surface, its mostly swirling fluids",
+        Atmosphere:
+          "primarily hydrogen, helium and methane, giving the planet its blue-green color",
+        orbitalPeriod: 84,
+        rotation: 17,
+        age: 4.5,
+        weather: "winds up to 900 km/h",
+        ringSystem:
+          "uranus has two sets of ring, the inner system of nine rings, the another one is reddish like dusty",
+      },
+    ],
   },
   {
     imgSrc: neptuneImg,
@@ -198,6 +240,22 @@ export const planets: planetsProps[] = [
       { imgSrc: hippocampNeptuneMoon, id: 2, alt: "hippocamp" },
     ],
     moonsAnimationDuration: 25,
-    astroData: [{ name: "neptune" }],
+    astroData: [
+      {
+        name: "neptune",
+        type: "ice giant",
+        position: 8,
+        mass: "17 times the mass of the Earth",
+        temperature: -214,
+        facts: "dark, cold and whipped by supersonic winds.",
+        surface:
+          "it does not have a solid surface, its atmosphere extends to great depths, gradually merging into water and other melted ices",
+        Atmosphere: "pimarily composed of hydrogen, helium and methane",
+        orbitalPeriod: 165,
+        rotation: 16,
+        age: 4.5,
+        weather: "",
+      },
+    ],
   },
 ];

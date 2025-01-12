@@ -57,5 +57,7 @@ export interface astroData {
   dayTemperature?: number;
   nightTemperature?: number;
   facts?: string;
-  position?: number
+  position?: number,
+  ringSystem?: string,
+  weather?: string
 }
