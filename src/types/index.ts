@@ -43,9 +43,15 @@ interface moons {
 export interface astroData {
   name: string;
   type?: string;
-  concept?: string;
+  lifespan?: string;
   composition?: string;
   temperature?: number;
-  size?: number;
-
+  size?: string;
+  age?: number;
+  mass?: string;
+  rotation?: number;
+  orbitalPeriod?: number;
+  dayNightCycle?: number;
+  surface?: string,
+  Atmosphere?: string
 }

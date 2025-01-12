@@ -10,18 +10,15 @@ const AstroDetails = ({
   currentIndex,
   handleCLick,
 }: dataAstrosProps) => {
-  
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [data, setData] = useState<astroData[]>()
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [data, setData] = useState<astroData[]>();
 
-  function toggleModal(idAstro: number){
-    const planetsData = dataAstros.filter(({ id })=>(
-      id === idAstro
-    ))
-    setData(planetsData[0].astroData)
-    setIsOpen(!isOpen)
+  function toggleModal(idAstro: number) {
+    const planetsData = dataAstros.filter(({ id }) => id === idAstro);
+    setData(planetsData[0].astroData);
+    setIsOpen(!isOpen);
   }
-  
+
   function buildScale(offset: number) {
     if (offset === -2 || offset === 2) {
       return 0.6;
@@ -32,8 +29,12 @@ const AstroDetails = ({
   return (
     <>
       {isOpen && (
-                <ModalAstroDetails isOpen={isOpen} astroData={data} toggleModal={setIsOpen}/>
-              )}
+        <ModalAstroDetails
+          isOpen={isOpen}
+          astroData={data}
+          toggleModal={setIsOpen}
+        />
+      )}
       {dataAstros.map(
         ({ imgSrc, id, moons, moonsAnimationDuration, astroData }, index) => {
           //calculate slide position based on index
@@ -49,7 +50,7 @@ const AstroDetails = ({
             if (condition && property === "width") return "430px";
             else "350px";
           }
-         
+
           return (
             <>
               <div
@@ -81,7 +82,7 @@ const AstroDetails = ({
                     width: buildSize("img"),
                     position: "relative",
                     zIndex: "-2",
-                    marginTop: !moons ? '5rem' : ''
+                    marginTop: !moons ? "5rem" : "",
                   }}
                 />
                 <div
@@ -92,13 +93,14 @@ const AstroDetails = ({
                     bottom: moons ? 55 : 135,
                   }}
                 >
-                  <section className={styles.containerCustomButton} onClick={()=>toggleModal(id)}>
+                  <section
+                    className={styles.containerCustomButton}
+                    onClick={() => toggleModal(id)}
+                  >
                     <CustomButton text={astroData[0].name} />
                   </section>
                 </div>
-                
               </div>
-              
             </>
           );
         }

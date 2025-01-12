@@ -25,8 +25,38 @@ import hippocampNeptuneMoon from "../assets/moon/hippocamp-neptune-moon.png";
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
-  { imgSrc: sunImg, id: 0, astroData: [{ name: "sun" }] },
-  { imgSrc: mercuryImg, id: 1, astroData: [{ name: "mercury" }] }, //should there be anothe array for moons of every planet?
+  {
+    imgSrc: sunImg,
+    id: 0,
+    astroData: [
+      {
+        name: "sun",
+        type: "yellow dwarf star",
+        age: 4.6,
+        size: "Diameter of about 1.39 million kilometers",
+        mass: "about 330,000 times that of earth",
+        composition:
+          "hydrogen, helium and other elements like Oxygen, carbon, neon and iron",
+        temperature: 5.5,
+        lifespan:
+          "The sun is about halfway throught its lifecycle. In approximately 5 billion years, it will expand into a red giant before eventually collapsing into a white dwarf.",
+      
+        },
+    ],
+  },
+  {
+    imgSrc: mercuryImg,
+    id: 1,
+    astroData: [
+      {
+        name: "mercury",
+        type: "terrestial rocky planet",
+        size: "about 4,880 kilometers - smallest planet in the solar system",
+        mass: 'Approximely 5.5% of Earth mass',
+        
+      },
+    ],
+  }, //should there be anothe array for moons of every planet?
   { imgSrc: venusImg, id: 2, astroData: [{ name: "venus" }] },
   {
     imgSrc: earthImg,
