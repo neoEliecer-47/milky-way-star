@@ -52,6 +52,10 @@ export interface astroData {
   rotation?: number;
   orbitalPeriod?: number;
   dayNightCycle?: number;
-  surface?: string,
-  Atmosphere?: string
+  surface?: string;
+  Atmosphere?: string;
+  dayTemperature?: number;
+  nightTemperature?: number;
+  facts?: string;
+  position?: number
 }

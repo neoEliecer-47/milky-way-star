@@ -40,8 +40,7 @@ export const planets: planetsProps[] = [
         temperature: 5.5,
         lifespan:
           "The sun is about halfway throught its lifecycle. In approximately 5 billion years, it will expand into a red giant before eventually collapsing into a white dwarf.",
-      
-        },
+      },
     ],
   },
   {
@@ -51,13 +50,44 @@ export const planets: planetsProps[] = [
       {
         name: "mercury",
         type: "terrestial rocky planet",
+        position: 1,
         size: "about 4,880 kilometers - smallest planet in the solar system",
-        mass: 'Approximely 5.5% of Earth mass',
-        
+        mass: "Approximely 5.5% of Earth mass",
+        dayTemperature: 430,
+        nightTemperature: -180,
+        facts:
+          "Mercury is the smallest planet in our solar system and the nearest to the Sun, Mercury is only slightly larger than Earth Moon",
+        surface: "Rocky, covered in craters, with plains and high cliffs",
+        Atmosphere:
+          "Extremely thin, composed mainly of oxygen, sodium, hydrogen, helium and potassium",
+        orbitalPeriod: 88,
+        rotation: 59,
+        dayNightCycle: 176,
+        age: 4.6,
       },
     ],
   }, //should there be anothe array for moons of every planet?
-  { imgSrc: venusImg, id: 2, astroData: [{ name: "venus" }] },
+  {
+    imgSrc: venusImg,
+    id: 2,
+    astroData: [
+      {
+        name: "venus",
+        type: "Terrestial rocky planet",
+        position: 2,
+        size: "about 12,104 kilometers - slightly smaller than Earth",
+        mass: 'roughly 80% of Earth mass',
+        temperature: 475,
+        facts: 'Venus is our closest planetary neighbor. Its the hottest planet in our solar system',
+        surface: 'Volcanic plains, mountains, craters, and vast lava flows',
+        Atmosphere: 'thick and composed mostly of carbon dioxide and nitrogen, with clouds of sulfuric acid',
+        orbitalPeriod: 225,
+        rotation: 243,
+        dayNightCycle: 60,
+        age: 4.6
+      },
+    ],
+  },
   {
     imgSrc: earthImg,
     id: 3,
