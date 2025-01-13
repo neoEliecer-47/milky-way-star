@@ -27,11 +27,15 @@ const modalRef = useRef<HTMLElement | null>(null)
         {astroData.map(({ name, images })=> (
           <>
             <div>{name}</div>
-            <section>
-              {images?.map(({ imgSrc })=>(
-               <AstroSurfaceImage imgSrc={imgSrc} />
-              ))}
-            </section>
+            
+          
+              
+                 {images && (
+                  <AstroSurfaceImage images={images} />
+                 )}
+             
+              
+         
           </>
           
         ))}

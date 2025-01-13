@@ -63,6 +63,10 @@ export interface astroData {
   images?: astroImages[]
 }
 
+export type modalImagesProps = {
+  images: astroImages[]
+}
+
 interface astroImages {
   imgSrc: string
 }
