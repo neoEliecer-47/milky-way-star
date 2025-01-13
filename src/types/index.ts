@@ -28,7 +28,7 @@ export type spaceLayerProps = {
 };
 
 export type modalAstroDetailsProps = {
-  astroData: astroData,
+  astroData: astroData[],
   isOpen: boolean,
   toggleModal: React.Dispatch<React.SetStateAction<boolean>>,
   index: number
@@ -60,4 +60,9 @@ export interface astroData {
   position?: number,
   ringSystem?: string,
   weather?: string
+  images?: astroImages[]
+}
+
+interface astroImages {
+  imgSrc: string
 }

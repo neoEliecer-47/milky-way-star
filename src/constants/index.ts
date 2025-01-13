@@ -22,6 +22,25 @@ import umbrielUranusMoon from "../assets/moon/umbriel-uranus-moon.png";
 import tritonNeptuneMoon from "../assets/moon/triton-neptune-moon.png";
 import hippocampNeptuneMoon from "../assets/moon/hippocamp-neptune-moon.png";
 
+import sunModal1 from "../assets/planets/modal-images/sun-1.png";
+import sunModal2 from "../assets/planets/modal-images/sun-2.jpg";
+import mercuryModal1 from "../assets/planets/modal-images/mercury-1.jpg";
+import mercuryModal2 from "../assets/planets/modal-images/mercury-2.jpg";
+import venusModal1 from "../assets/planets/modal-images/venus-1.jpg";
+import venusModal2 from "../assets/planets/modal-images/venus-2.jpg";
+import earthModal1 from "../assets/planets/modal-images/earth-1.jpg";
+import earthModal2 from "../assets/planets/modal-images/earth-2.jpg";
+import marsModal1 from "../assets/planets/modal-images/mars-1.jpg";
+import marsModal2 from "../assets/planets/modal-images/mars-2.jpg";
+import jupiterModal1 from "../assets/planets/modal-images/jupiter-1.avif";
+import jupiterModal2 from "../assets/planets/modal-images/jupiter-2.avif";
+import saturnModal1 from "../assets/planets/modal-images/saturn-1.jpg";
+import saturnModal2 from "../assets/planets/modal-images/saturn-2.jpg";
+import uranusModal1 from "../assets/planets/modal-images/uranus-1.jpg";
+import uranusModal2 from "../assets/planets/modal-images/uranus-2.jpg";
+import neptuneModal1 from "../assets/planets/modal-images/neptune-1.jpg";
+import neptuneModal2 from "../assets/planets/modal-images/neptune-2.jpg";
+
 import { planetsProps } from "../types";
 
 export const planets: planetsProps[] = [
@@ -40,6 +59,7 @@ export const planets: planetsProps[] = [
         temperature: 5.5,
         lifespan:
           "The sun is about halfway throught its lifecycle. In approximately 5 billion years, it will expand into a red giant before eventually collapsing into a white dwarf.",
+        images: [{ imgSrc: sunModal1 }, {imgSrc: sunModal2}]  
       },
     ],
   },
