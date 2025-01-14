@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { modalAstroDetailsProps } from "../types";
 import styles from "./ModalAstroDetails.module.css";
 import AstroSurfaceImage from "./AstroSurfaceImage";
 import StaticData from "./StaticData";
 import Accordion from "./interface/Accordion";
 import ReadMore from "./interface/ReadMore";
+import NavbarModal from "./interface/NavbarModal";
 
 const ModalAstroDetails = ({
   astroData,
@@ -12,7 +13,9 @@ const ModalAstroDetails = ({
   toggleModal,
 }: modalAstroDetailsProps) => {
   const modalRef = useRef<HTMLElement | null>(null);
-  console.log(astroData);
+  const [navActive, setNavActive] = useState(false)
+ 
+
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
       toggleModal(false);
@@ -27,9 +30,12 @@ const ModalAstroDetails = ({
     };
   }, []);
 
+  const titles = ['title1', 'title2', 'title3']
+
   return (
     <>
       <article ref={modalRef} className={styles.modalContainer}>
+        <NavbarModal titles={titles}/>
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>

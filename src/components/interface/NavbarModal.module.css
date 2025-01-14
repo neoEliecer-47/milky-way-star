@@ -1,0 +1,38 @@
+.navContainer{
+    
+    height: 3rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+ .navOption{
+    position: relative;
+    display: inline-block;
+    padding:  0.8rem;
+    width: 3rem;
+   z-index: 1;
+    color: #fff;
+    transition: background-color 0.5s, transform 0.5s ease;
+   
+ }
+
+ .navOption.active{
+    color: #ffffff;
+ }
+
+.stack{
+    position: absolute;
+    height: 3rem;
+    background-color: rgb(41, 161, 121);
+    transition: transform 0.5s ease;
+    z-index: 0;
+    pointer-events: none;
+    
+}
+
