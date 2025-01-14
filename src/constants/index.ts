@@ -56,10 +56,11 @@ export const planets: planetsProps[] = [
         mass: "about 330,000 times that of earth",
         composition:
           "hydrogen, helium and other elements like Oxygen, carbon, neon and iron",
-        temperature: 5.5,
+        temperature: 15,
         lifespan:
           "The sun is about halfway throught its lifecycle. In approximately 5 billion years, it will expand into a red giant before eventually collapsing into a white dwarf.",
-        images: [{ imgSrc: sunModal1 }, {imgSrc: sunModal2}]  
+        images: [{ imgSrc: sunModal1 }, {imgSrc: sunModal2}],
+        surface: 'the Sun does not hace a solid surface. The part of the sun commonly called its surface is the photosphere'  
       },
     ],
   },
@@ -182,11 +183,11 @@ export const planets: planetsProps[] = [
         size: "about 139,820 kilometers - 11 times wider than Earth",
         temperature: -145,
         facts:
-          "the planet immebse gravity helps shield the inner solar system from asteroid impacts by capturing or deflecting them",
+          "the planet immense gravity helps shield the inner solar system from asteroid impacts by capturing or deflecting them. known for its colorful cloud bands, violent storms and the iconic Great Red Spot",
         surface:
           "jupiter lacks a solid surface, primarily hydrogen and helium with trace amounuts of methane",
         Atmosphere:
-          "known for its colorful cloud bands, violent storms and the iconic Great Red Spot",
+          "made up of hydrogen and helium, its well-mixed and extends thousands of kilometers below the clouds",
         orbitalPeriod: 11.86,
         rotation: 9,
         age: 4.6,

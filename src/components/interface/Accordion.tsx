@@ -6,20 +6,29 @@ import AccordionArrow from "./AccordionArrow";
 const Accordion = ({
   title,
   text,
+  color
 }: {
   title: string;
   text: string | undefined;
+  color?: string
 }) => {
   const [hiddenContent, setHiddenContent] = useState(true);
   const accordionRef = useRef<HTMLDivElement>(null);
-
+    function buildBackground(){
+        if(color === 'green'){
+            return 'rgba(197, 231, 154, 0.7)'
+        }else if(color === 'purple') {
+            return 'rgba(217, 170, 217, 0.6'
+        }
+        return 'rgba(193, 157, 149, 0.7)'
+    }
   function handleAccordion() {
     return setHiddenContent(!hiddenContent);
   }
   return (
     <section
       className={classNames(styles.container, "lg:w-[25rem] gap-3 m-auto")}
-      style={{ backgroundColor: title === 'atmosphere' ? 'rgba(197, 231, 154, 0.7)' : 'rgba(217, 170, 217, 0.6)' }}
+      style={{ backgroundColor: buildBackground() }}
       onClick={handleAccordion}
     >
       <div className={styles.containerTitle}>

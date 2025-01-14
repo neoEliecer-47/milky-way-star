@@ -49,21 +49,24 @@ const ModalAstroDetails = ({
             <Accordion
               title={data.facts ? "facts" : "lifespan"}
               text={data.facts ? data.facts : data.lifespan}
+              color="purple"
             />
+            <Accordion title="surface" text={data.surface} />
             <Accordion
               title={data.Atmosphere ? "atmosphere" : "composition"}
               text={data.Atmosphere ? data.Atmosphere : data.composition}
+              color="green"
             />
             <StaticData
               title="temperature"
               value={data.temperature}
               textBefore="around"
-              textAfterwards="°C"
+              textAfterwards={data.name === "sun" ? " million °C" : "°C"}
             />
             {data.orbitalPeriod && (
               <StaticData
                 title="orbital period"
-                textBefore={data.name === 'earth' ? 'it takes ' : 'about '}
+                textBefore={data.name === "earth" ? "it takes " : "about "}
                 value={data.orbitalPeriod}
                 textAfterwards={
                   data?.position && data.position >= 5
@@ -87,7 +90,12 @@ const ModalAstroDetails = ({
                 }
               />
             )}
-            <StaticData title="age" textBefore="around " value={data.age} textAfterwards=" billion years"/>
+            <StaticData
+              title="age"
+              textBefore="around "
+              value={data.age}
+              textAfterwards=" billion years"
+            />
           </>
         ))}
       </article>
