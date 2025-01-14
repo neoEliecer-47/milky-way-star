@@ -126,7 +126,7 @@ export const planets: planetsProps[] = [
         mass: "about 5.97 x 10~24 kilograms",
         temperature: 14,
         facts:
-          "Earth is the only planet that support life due to its liquid water, atmosphere,and suitable climate.",
+          "Earth is the only planet that support life due to its liquid water, atmosphere,and suitable climate. \n Earth is the only planet in our solar system known to have liquid water which allowed life to begin about 3.8 billion years ago.",
         surface: "71% covered by water, 29% land",
         Atmosphere:
           "composed mainly of nitrogen and oxygen, with traces of other gases like carbon dioxide and argon.",
