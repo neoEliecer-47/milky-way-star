@@ -19,6 +19,7 @@ const Accordion = ({
   return (
     <section
       className={classNames(styles.container, "lg:w-[25rem] gap-3 m-auto")}
+      style={{ backgroundColor: title === 'atmosphere' ? 'rgba(197, 231, 154, 0.7)' : 'rgba(217, 170, 217, 0.6)' }}
       onClick={handleAccordion}
     >
       <div className={styles.containerTitle}>

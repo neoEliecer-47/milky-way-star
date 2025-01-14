@@ -50,7 +50,7 @@ const ModalAstroDetails = ({
               title={data.facts ? "facts" : "lifespan"}
               text={data.facts ? data.facts : data.lifespan}
             />
-            <StaticData
+            <Accordion
               title={data.Atmosphere ? "atmosphere" : "composition"}
               text={data.Atmosphere ? data.Atmosphere : data.composition}
             />
@@ -63,7 +63,7 @@ const ModalAstroDetails = ({
             {data.orbitalPeriod && (
               <StaticData
                 title="orbital period"
-                textBefore="about "
+                textBefore={data.name === 'earth' ? 'it takes ' : 'about '}
                 value={data.orbitalPeriod}
                 textAfterwards={
                   data?.position && data.position >= 5
