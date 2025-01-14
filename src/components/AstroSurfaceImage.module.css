@@ -1,27 +1,26 @@
-.container{
-overflow: hidden;
-    border: thin 10px red;
-    border-radius: 2rem;
-    display: flex;
-    gap: 2px;
+.container {
+  overflow: hidden;
+  border: thin 10px red;
+  border-radius: 1rem;
+  display: flex;
+  gap: 2px;
+  width: 100%;
 }
 
-.containerImage{
-    overflow: hidden;
-padding: 0;
-margin: 0;
-
+.containerImage {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms ease;
 
-.image{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 250ms ease;
-    
-    
+  max-width: 20rem;
 }
-.image:hover{
-    transform: scale(1.2);
+.image:hover {
+  transform: scale(1.2);
 }

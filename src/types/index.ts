@@ -54,13 +54,19 @@ export interface astroData {
   dayNightCycle?: number;
   surface?: string;
   Atmosphere?: string;
-  dayTemperature?: number;
-  nightTemperature?: number;
   facts?: string;
   position?: number,
   ringSystem?: string,
   weather?: string
-  images?: astroImages[]
+  images: astroImages[]
+}
+
+export type staticDataProps = {
+  title: string,
+  text?: string,
+  textBefore?: string,
+  textAfterwards?: string,
+  value?: number
 }
 
 export type modalImagesProps = {

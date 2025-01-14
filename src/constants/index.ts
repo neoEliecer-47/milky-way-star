@@ -22,7 +22,7 @@ import umbrielUranusMoon from "../assets/moon/umbriel-uranus-moon.png";
 import tritonNeptuneMoon from "../assets/moon/triton-neptune-moon.png";
 import hippocampNeptuneMoon from "../assets/moon/hippocamp-neptune-moon.png";
 
-import sunModal1 from "../assets/planets/modal-images/sun-1.png";
+import sunModal1 from "../assets/planets/modal-images/sun-1.jpg";
 import sunModal2 from "../assets/planets/modal-images/sun-2.jpg";
 import mercuryModal1 from "../assets/planets/modal-images/mercury-1.jpg";
 import mercuryModal2 from "../assets/planets/modal-images/mercury-2.jpg";
@@ -73,8 +73,7 @@ export const planets: planetsProps[] = [
         position: 1,
         size: "about 4,880 kilometers - smallest planet in the solar system",
         mass: "Approximely 5.5% of Earth mass",
-        dayTemperature: 430,
-        nightTemperature: -180,
+        temperature: 167,
         facts:
           "Mercury is the smallest planet in our solar system and the nearest to the Sun, Mercury is only slightly larger than Earth Moon",
         surface: "Rocky, covered in craters, with plains and high cliffs",
@@ -84,6 +83,7 @@ export const planets: planetsProps[] = [
         rotation: 59,
         dayNightCycle: 176,
         age: 4.6,
+        images: [{ imgSrc: mercuryModal1 }, {imgSrc: mercuryModal2}]
       },
     ],
   }, //should there be anothe array for moons of every planet?
@@ -107,6 +107,7 @@ export const planets: planetsProps[] = [
         rotation: 243,
         dayNightCycle: 60,
         age: 4.6,
+        images: [{ imgSrc: venusModal1 }, {imgSrc: venusModal2}]
       },
     ],
   },
@@ -132,6 +133,7 @@ export const planets: planetsProps[] = [
         rotation: 24,
         dayNightCycle: 12,
         age: 4.5,
+        images: [{ imgSrc: earthModal1 }, {imgSrc: earthModal2}]
       },
     ],
   },
@@ -147,8 +149,7 @@ export const planets: planetsProps[] = [
         position: 4,
         size: "about 6,779 kilometers - roughly half the size of earth",
         mass: "about 10.7% of Earth mass",
-        dayTemperature: -125,
-        nightTemperature: -195,
+        temperature: -62,
         facts:
           "evidence suggests Mars once had flowing water and a thicker atmosphere.",
         surface:
@@ -158,6 +159,7 @@ export const planets: planetsProps[] = [
         orbitalPeriod: 687,
         rotation: 24.3,
         age: 4.6,
+        images: [{ imgSrc: marsModal1 }, {imgSrc: marsModal2}]
       },
     ],
   },
@@ -188,6 +190,7 @@ export const planets: planetsProps[] = [
         orbitalPeriod: 11.86,
         rotation: 9,
         age: 4.6,
+        images: [{ imgSrc: jupiterModal1 }, {imgSrc: jupiterModal2}]
       },
     ],
   },
@@ -219,6 +222,7 @@ export const planets: planetsProps[] = [
           "the most extensive and visible ring system in the Solar System, made of ice, rock and dust",
         weather:
           "extremely strong winds and storms, with some speeds reaching 1,800 km/h",
+        images: [{ imgSrc: saturnModal1 }, {imgSrc: saturnModal2}]
       },
     ],
   },
@@ -249,6 +253,7 @@ export const planets: planetsProps[] = [
         weather: "winds up to 900 km/h",
         ringSystem:
           "uranus has two sets of ring, the inner system of nine rings, the another one is reddish like dusty",
+        images: [{ imgSrc: uranusModal1 }, {imgSrc: uranusModal2}]
       },
     ],
   },
@@ -275,6 +280,7 @@ export const planets: planetsProps[] = [
         rotation: 16,
         age: 4.5,
         weather: "",
+        images: [{ imgSrc: neptuneModal1 }, {imgSrc: neptuneModal2}]
       },
     ],
   },
