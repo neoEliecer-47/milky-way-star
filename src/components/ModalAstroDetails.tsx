@@ -3,6 +3,7 @@ import { modalAstroDetailsProps } from "../types";
 import styles from "./ModalAstroDetails.module.css";
 import AstroSurfaceImage from "./AstroSurfaceImage";
 import StaticData from "./StaticData";
+import Accordion from "./interface/Accordion";
 
 const ModalAstroDetails = ({
   astroData,
@@ -45,7 +46,7 @@ const ModalAstroDetails = ({
             )}
             <StaticData title="diameter" text={data.size} />
             <StaticData title="mass" text={data.mass} />
-            <StaticData
+            <Accordion
               title={data.facts ? "facts" : "lifespan"}
               text={data.facts ? data.facts : data.lifespan}
             />
