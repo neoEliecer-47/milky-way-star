@@ -4,6 +4,7 @@ import styles from "./ModalAstroDetails.module.css";
 import AstroSurfaceImage from "./AstroSurfaceImage";
 import StaticData from "./StaticData";
 import Accordion from "./interface/Accordion";
+import ReadMore from "./interface/ReadMore";
 
 const ModalAstroDetails = ({
   astroData,
@@ -44,8 +45,8 @@ const ModalAstroDetails = ({
                 textAfterwards="from the Sun"
               />
             )}
-            <StaticData title="diameter" text={data.size} />
-            <StaticData title="mass" text={data.mass} />
+            
+            
             <Accordion
               title={data.facts ? "facts" : "lifespan"}
               text={data.facts ? data.facts : data.lifespan}
@@ -96,6 +97,8 @@ const ModalAstroDetails = ({
               value={data.age}
               textAfterwards=" billion years"
             />
+            <StaticData title="mass" text={data.mass} />
+            <ReadMore title="diameter" text={data.size} length={20}/>
           </>
         ))}
       </article>

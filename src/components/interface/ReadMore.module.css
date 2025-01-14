@@ -1,0 +1,17 @@
+.readMoreContainer{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+
+.title{
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+}
+.text{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}

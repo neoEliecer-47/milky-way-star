@@ -73,6 +73,12 @@ export type modalImagesProps = {
   images: astroImages[]
 }
 
+export type readMoreProps = {
+  title: string;
+  text: string;
+  length: number; 
+}
+
 interface astroImages {
   imgSrc: string
 }

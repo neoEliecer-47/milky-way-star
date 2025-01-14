@@ -59,8 +59,9 @@ export const planets: planetsProps[] = [
         temperature: 15,
         lifespan:
           "The sun is about halfway throught its lifecycle. In approximately 5 billion years, it will expand into a red giant before eventually collapsing into a white dwarf.",
-        images: [{ imgSrc: sunModal1 }, {imgSrc: sunModal2}],
-        surface: 'the Sun does not hace a solid surface. The part of the sun commonly called its surface is the photosphere'  
+        images: [{ imgSrc: sunModal1 }, { imgSrc: sunModal2 }],
+        surface:
+          "the Sun does not hace a solid surface. The part of the sun commonly called its surface is the photosphere",
       },
     ],
   },
@@ -84,7 +85,7 @@ export const planets: planetsProps[] = [
         rotation: 59,
         dayNightCycle: 176,
         age: 4.6,
-        images: [{ imgSrc: mercuryModal1 }, {imgSrc: mercuryModal2}]
+        images: [{ imgSrc: mercuryModal1 }, { imgSrc: mercuryModal2 }],
       },
     ],
   }, //should there be anothe array for moons of every planet?
@@ -108,7 +109,7 @@ export const planets: planetsProps[] = [
         rotation: 243,
         dayNightCycle: 60,
         age: 4.6,
-        images: [{ imgSrc: venusModal1 }, {imgSrc: venusModal2}]
+        images: [{ imgSrc: venusModal1 }, { imgSrc: venusModal2 }],
       },
     ],
   },
@@ -134,7 +135,7 @@ export const planets: planetsProps[] = [
         rotation: 24,
         dayNightCycle: 12,
         age: 4.5,
-        images: [{ imgSrc: earthModal1 }, {imgSrc: earthModal2}]
+        images: [{ imgSrc: earthModal1 }, { imgSrc: earthModal2 }],
       },
     ],
   },
@@ -160,7 +161,7 @@ export const planets: planetsProps[] = [
         orbitalPeriod: 687,
         rotation: 24.3,
         age: 4.6,
-        images: [{ imgSrc: marsModal1 }, {imgSrc: marsModal2}]
+        images: [{ imgSrc: marsModal1 }, { imgSrc: marsModal2 }],
       },
     ],
   },
@@ -191,7 +192,7 @@ export const planets: planetsProps[] = [
         orbitalPeriod: 11.86,
         rotation: 9,
         age: 4.6,
-        images: [{ imgSrc: jupiterModal1 }, {imgSrc: jupiterModal2}]
+        images: [{ imgSrc: jupiterModal1 }, { imgSrc: jupiterModal2 }],
       },
     ],
   },
@@ -211,8 +212,9 @@ export const planets: planetsProps[] = [
         position: 6,
         mass: "5.68 x 10~26 kg - 95 times the mass of the Earth",
         temperature: -178,
+        size: "saturn is the second largest in the solar system, with 120,500 kilometers. This makes it about nine times wider than Earth.",
         facts:
-          "Saturn is the second largest in the solar system and its known for its rings, moons and other unique features",
+          "Saturn is so big that you could fit about 764 Earths insideit. Its known for its rings, moons and other unique features",
         surface:
           "no solid surface, a dense atmosphere transitions to liquid and metalic hydrogen layers",
         Atmosphere: "composed primarily of hydrogen and helium",
@@ -223,7 +225,7 @@ export const planets: planetsProps[] = [
           "the most extensive and visible ring system in the Solar System, made of ice, rock and dust",
         weather:
           "extremely strong winds and storms, with some speeds reaching 1,800 km/h",
-        images: [{ imgSrc: saturnModal1 }, {imgSrc: saturnModal2}]
+        images: [{ imgSrc: saturnModal1 }, { imgSrc: saturnModal2 }],
       },
     ],
   },
@@ -242,8 +244,9 @@ export const planets: planetsProps[] = [
         position: 7,
         mass: "14.5 times the mass of the earth",
         temperature: -224,
+        size: "this ice giant planet has a equatorial diameter of 51,118 kilometers. Uranus is four times wider than Earth",
         facts:
-          "Uranus is a very cold and windy world. its surrounded by 13 faint rings and 28 small moons",
+          "Uranus is a very cold and windy world. its surrounded by 13 faint rings and 28 small moons and its the only planet that spins on its side.",
         surface:
           "uranus does not have a true surface, its mostly swirling fluids",
         Atmosphere:
@@ -253,8 +256,8 @@ export const planets: planetsProps[] = [
         age: 4.5,
         weather: "winds up to 900 km/h",
         ringSystem:
-          "uranus has two sets of ring, the inner system of nine rings, the another one is reddish like dusty",
-        images: [{ imgSrc: uranusModal1 }, {imgSrc: uranusModal2}]
+          "uranus has two sets of ring, the inner system of nine rings, the another one is reddish like dusty.",
+        images: [{ imgSrc: uranusModal1 }, { imgSrc: uranusModal2 }],
       },
     ],
   },
@@ -271,9 +274,11 @@ export const planets: planetsProps[] = [
         name: "neptune",
         type: "ice giant",
         position: 8,
+        size: "with an equatorial diameter of 49,528 kilometers. Neptune is about four times wider than Earth. If Earth were the size of a nickel, Neptune would be about as big as a baseball.",
         mass: "17 times the mass of the Earth",
         temperature: -214,
-        facts: "dark, cold and whipped by supersonic winds.",
+        facts:
+          "dark, cold and whipped by supersonic winds. Neptune has rings, but they are difficult to see and its seasons last for over 40 years because it takes too long to orbit the sun since is the farthest planet from it.",
         surface:
           "it does not have a solid surface, its atmosphere extends to great depths, gradually merging into water and other melted ices",
         Atmosphere: "pimarily composed of hydrogen, helium and methane",
@@ -281,7 +286,7 @@ export const planets: planetsProps[] = [
         rotation: 16,
         age: 4.5,
         weather: "",
-        images: [{ imgSrc: neptuneModal1 }, {imgSrc: neptuneModal2}]
+        images: [{ imgSrc: neptuneModal1 }, { imgSrc: neptuneModal2 }],
       },
     ],
   },
