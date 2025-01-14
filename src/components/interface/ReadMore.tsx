@@ -12,12 +12,12 @@ const ReadMore = ({ title, text, length }: readMoreProps) => {
   return (
     <section className={styles.readMoreContainer}>
         <h1 className={styles.title}>{title}</h1>
-        <p className={styles.text}>
-            {isExpanded ? text : `${text.slice(0, length)}...`}
-        </p>
+        <span className={styles.text}>
+            {isExpanded ? text : `${text.slice(0, length)}`}
+        </span>
         {text.length > length && (
           <button className={styles.buttonReadMore} onClick={toggleReadMore}>
-            {isExpanded ? 'read less' : 'read more'}
+            <span style={{ marginLeft: '3px' }}>{isExpanded ? 'read less' : '...read more'}</span>
           </button>
         )}
     </section>
