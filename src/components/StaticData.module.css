@@ -1,19 +1,33 @@
-.containerData{
-    display: flex;
+.containerData {
+  display: flex;
+  padding: 0.2rem;
 }
 
-.text{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    font-weight: 400;
+.text {
+  margin: 0;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  align-items: center;
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(72, 72, 72);
+  white-space: wrap;
 }
 
-.title{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 1rem;
+.text::first-letter{
+    text-transform: capitalize;
+}
+
+.title {
+  margin: 0;
+
+  white-space: nowrap;
+  height: fit-content;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: capitalize;
 }

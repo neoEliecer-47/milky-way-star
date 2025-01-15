@@ -18,6 +18,7 @@
     overflow: hidden;
     height: 0;
     transition: height 250ms ease;
+   
   }
   
   .content::first-letter{
