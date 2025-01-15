@@ -20,6 +20,10 @@
     transition: height 250ms ease;
   }
   
+  .content::first-letter{
+    text-transform: capitalize;
+  }
+  
   .contentActive {
   
     cursor: pointer;

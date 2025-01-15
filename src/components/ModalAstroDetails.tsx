@@ -23,8 +23,6 @@ const ModalAstroDetails = ({
   }
 
   function buildBackgroundGradientForEachAstro(index: number){
-    const colors = planetColors[index]
-    console.log(colors)
     return planetColors[index]
   }
 

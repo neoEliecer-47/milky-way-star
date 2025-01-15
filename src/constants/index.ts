@@ -221,7 +221,7 @@ export const planets: planetsProps[] = [
         temperature: -178,
         size: "saturn is the second largest in the solar system, with 120,500 kilometers. This makes it about nine times wider than Earth.",
         facts:
-          "Saturn is so big that you could fit about 764 Earths insideit. Its known for its rings, moons and other unique features",
+          "Saturn is so big that you could fit about 764 Earths inside it. Its known for its rings, moons and other unique features",
         surface:
           "no solid surface, a dense atmosphere transitions to liquid and metalic hydrogen layers",
         Atmosphere: "composed primarily of hydrogen and helium",
