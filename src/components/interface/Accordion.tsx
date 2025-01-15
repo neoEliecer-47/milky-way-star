@@ -18,7 +18,7 @@ const Accordion = ({
         if(color === 'green'){
             return 'rgba(197, 231, 154, 0.7)'
         }else if(color === 'purple') {
-            return 'rgba(217, 170, 217, 0.6'
+            return 'rgba(217, 170, 217, 0.6)'
         }
         return 'rgba(193, 157, 149, 0.7)'
     }

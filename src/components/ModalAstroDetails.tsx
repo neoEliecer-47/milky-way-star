@@ -6,6 +6,7 @@ import StaticData from "./StaticData";
 import Accordion from "./interface/Accordion";
 import ReadMore from "./interface/ReadMore";
 import NavbarModal from "./interface/NavbarModal";
+import { planetColors } from "../constants";
 
 const ModalAstroDetails = ({
   astroData,
@@ -14,12 +15,17 @@ const ModalAstroDetails = ({
 }: modalAstroDetailsProps) => {
   const modalRef = useRef<HTMLElement | null>(null);
   const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
- 
 
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
       toggleModal(false);
     }
+  }
+
+  function buildBackgroundGradientForEachAstro(index: number){
+    const colors = planetColors[index]
+    console.log(colors)
+    return planetColors[index]
   }
 
   useEffect(() => {
@@ -30,87 +36,114 @@ const ModalAstroDetails = ({
     };
   }, []);
 
-  const titles = ['title1', 'title2', 'title3']
+  const titles = ["title1", "title2", "title3"];
 
   return (
     <>
       <article ref={modalRef} className={styles.modalContainer}>
-       
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
               <AstroSurfaceImage images={data.images} />
-              <h1 className={styles.name}>{data.name}</h1>
-              <NavbarModal titles={titles} activeOptionIndex={activeOptionIndex} updateOptionIndex={setActiveOptionIndex}/>
+              
+              <h1
+                className={styles.name}
+                style={{
+                  background:
+                    `linear-gradient(to left, ${buildBackgroundGradientForEachAstro(data.id)}`,
+                }}
+              >
+                {data.name}
+              </h1>
+              <NavbarModal
+                titles={titles}
+                activeOptionIndex={activeOptionIndex}
+                updateOptionIndex={setActiveOptionIndex}
+              />
             </div>
             <div className={styles.wrapperStaticData}>
-            <StaticData title="type" text={data.type} />
-            {data.position && (
-              <StaticData
-                title="position"
-                textBefore="It is the"
-                value={data.position}
-                textAfterwards="from the Sun"
-              />
-            )}
-            
-            
-          {activeOptionIndex === -1 && (
-       <>
-               <Accordion
-              title={data.facts ? "facts" : "lifespan"}
-              text={data.facts ? data.facts : data.lifespan}
-              color="purple"
-            />
-            <Accordion title="surface" text={data.surface} />
-            <Accordion
-              title={data.Atmosphere ? "atmosphere" : "composition"}
-              text={data.Atmosphere ? data.Atmosphere : data.composition}
-              color="green"
-            />
-       </>
-          )}
-            <StaticData
-              title="temperature"
-              value={data.temperature}
-              textBefore="around"
-              textAfterwards={data.name === "sun" ? " million °C" : "°C"}
-            />
-            {data.orbitalPeriod && (
-              <StaticData
-                title="orbital period"
-                textBefore={data.name === "earth" ? "it takes " : "about "}
-                value={data.orbitalPeriod}
-                textAfterwards={
-                  data?.position && data.position >= 5
-                    ? " Earth years"
-                    : " earth days"
-                }
-              />
-            )}
-            {data?.rotation && (
-              <StaticData
-                title="rotation"
-                textBefore="one rotation takes "
-                value={data.rotation}
-                textAfterwards={
-                  (data?.position &&
-                    data.position >= 3 &&
-                    data.position <= 4) ||
-                  (data.position && data?.position >= 6)
-                    ? " earth hours"
-                    : " earth days"
-                }
-              />
-            )}
-            <StaticData
-              title="age"
-              textBefore="around "
-              value={data.age}
-              textAfterwards=" billion years"
-            />
-            <StaticData title="mass" text={data.mass} />
-            <ReadMore title="diameter" text={data.size} length={20}/>
+              {activeOptionIndex === 0 && (
+                <>
+                  <StaticData title="type" text={data.type} />
+                  {data.position && (
+                    <StaticData
+                      title="position"
+                      textBefore="It is the"
+                      value={data.position}
+                      textAfterwards="from the Sun"
+                    />
+                  )}
+                  <StaticData
+                    title="age"
+                    textBefore="around "
+                    value={data.age}
+                    textAfterwards=" billion years"
+                  />
+                  <StaticData
+                    title="temperature"
+                    value={data.temperature}
+                    textBefore="around"
+                    textAfterwards={data.name === "sun" ? " million °C" : "°C"}
+                  />
+                  <StaticData title="mass" text={data.mass} />
+                </>
+              )}
+
+              {activeOptionIndex === -1 && (
+                <>
+                  <Accordion
+                    title={data.facts ? "facts" : "lifespan"}
+                    text={data.facts ? data.facts : data.lifespan}
+                    color="purple"
+                  />
+                  <Accordion title="surface" text={data.surface} />
+                  <Accordion
+                    title={data.Atmosphere ? "atmosphere" : "composition"}
+                    text={data.Atmosphere ? data.Atmosphere : data.composition}
+                    color="green"
+                  />
+                </>
+              )}
+
+              {activeOptionIndex === 1 && (
+                <>
+                  {data.orbitalPeriod && (
+                    <StaticData
+                      title="orbital period"
+                      textBefore={
+                        data.name === "earth" ? "it takes " : "about "
+                      }
+                      value={data.orbitalPeriod}
+                      textAfterwards={
+                        data?.position && data.position >= 5
+                          ? " Earth years"
+                          : " earth days"
+                      }
+                    />
+                  )}
+                  {data?.rotation && (
+                    <StaticData
+                      title="rotation"
+                      textBefore="one rotation takes "
+                      value={data.rotation}
+                      textAfterwards={
+                        (data?.position &&
+                          data.position >= 3 &&
+                          data.position <= 4) ||
+                        (data.position && data?.position >= 6)
+                          ? " earth hours"
+                          : " earth days"
+                      }
+                    />
+                  )}
+
+                  <ReadMore
+                    title="diameter"
+                    text={data.size ? data.size : "unknown"}
+                    length={20}
+                  />
+                </>
+              )}
             </div>
           </>
         ))}

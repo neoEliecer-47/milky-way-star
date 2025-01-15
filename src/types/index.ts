@@ -41,6 +41,7 @@ interface moons {
 }
 
 export interface astroData {
+  id: number;
   name: string;
   type?: string;
   lifespan?: string;

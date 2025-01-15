@@ -49,6 +49,7 @@ export const planets: planetsProps[] = [
     id: 0,
     astroData: [
       {
+        id: 0,
         name: "sun",
         type: "yellow dwarf star",
         age: 4.6,
@@ -70,6 +71,7 @@ export const planets: planetsProps[] = [
     id: 1,
     astroData: [
       {
+        id: 1,
         name: "mercury",
         type: "terrestial rocky planet",
         position: 1,
@@ -94,6 +96,7 @@ export const planets: planetsProps[] = [
     id: 2,
     astroData: [
       {
+        id: 2,
         name: "venus",
         type: "Terrestial rocky planet",
         position: 2,
@@ -120,6 +123,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 20,
     astroData: [
       {
+        id: 3,
         name: "earth",
         type: "terrestial rocky planet",
         position: 3,
@@ -146,6 +150,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 3,
     astroData: [
       {
+        id: 4,
         name: "mars",
         type: "terrestrial rocky planet",
         position: 4,
@@ -177,6 +182,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 8,
     astroData: [
       {
+        id: 5,
         name: "jupiter",
         type: "gas giant",
         position: 5,
@@ -207,6 +213,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 16,
     astroData: [
       {
+        id: 6,
         name: "saturn",
         type: "gas giant",
         position: 6,
@@ -239,6 +246,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 5,
     astroData: [
       {
+        id: 7,
         name: "uranus",
         type: "ice giant",
         position: 7,
@@ -271,6 +279,7 @@ export const planets: planetsProps[] = [
     moonsAnimationDuration: 25,
     astroData: [
       {
+        id: 8,
         name: "neptune",
         type: "ice giant",
         position: 8,
@@ -291,3 +300,16 @@ export const planets: planetsProps[] = [
     ],
   },
 ];
+
+export const planetColors = [
+  'rgb(224, 180, 35), rgb(247, 84, 20)',
+  'rgba(100, 100, 100, 0.3), rgb(100, 100, 100)',
+  'rgb(231, 100, 34), rgb(194, 69, 6)',
+  'white, rgb(0, 112, 0), blue',
+  'rgb(235, 49, 49), rgb(175, 6, 6)',
+  'white, orange, rgba(247, 165, 118, 0.7)',
+  'rgba(243, 239, 237, 0.92), rgba(247, 165, 118, 0.9), rgba(138, 129, 8, 0.943)',
+  'rgba(118, 200, 206, 0.943),  rgba(135, 136, 190, 0.943)',
+  'blue, rgba(92, 53, 185, 0.943)',
+
+]

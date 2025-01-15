@@ -9,6 +9,7 @@ const AccordionArrow = ({ className, stroke }:{ className?: string, stroke: numb
         strokeWidth={stroke}
         stroke="currentColor"
         className={className}
+        style={{ borderRadius: '5px', backgroundColor: 'rgba(242, 246, 237, 0.3)' }}
         
       >
         <path

@@ -32,12 +32,19 @@
     text-align: center;
     margin: 10px 0;
     font-size: 1.5rem;
-   background-color: aqua;
+  background-color: rgba(92, 53, 185, 0.943);
+   color: white;
+   border-radius: 5px;
 }
+
+
 .wrapperStaticData{
     padding: 5px;
     margin: 10px 0;
-    background-color: bisque;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+
 }
 
 .bgBlur {

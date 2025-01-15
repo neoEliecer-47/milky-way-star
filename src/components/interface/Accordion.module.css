@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    text-transform: capitalize;
   }
   
   .container {
@@ -9,6 +10,9 @@
     cursor: pointer;
     width: 100%;
     background-color: rgba(193, 157, 149, 0.7);
+    border-radius: 5px;
+    border: solid 0.2px rgba(0, 0, 0, 0.3);
+    
   }
   .content {
     overflow: hidden;
