@@ -13,7 +13,7 @@ const ModalAstroDetails = ({
   toggleModal,
 }: modalAstroDetailsProps) => {
   const modalRef = useRef<HTMLElement | null>(null);
-  const [navActive, setNavActive] = useState(false)
+  const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
  
 
   function handleClickOutside(e: MouseEvent) {
@@ -41,7 +41,7 @@ const ModalAstroDetails = ({
             <div className={styles.headerModalContainer}>
               <AstroSurfaceImage images={data.images} />
               <h1 className={styles.name}>{data.name}</h1>
-              <NavbarModal titles={titles}/>
+              <NavbarModal titles={titles} activeOptionIndex={activeOptionIndex} updateOptionIndex={setActiveOptionIndex}/>
             </div>
             <div className={styles.wrapperStaticData}>
             <StaticData title="type" text={data.type} />
@@ -55,7 +55,9 @@ const ModalAstroDetails = ({
             )}
             
             
-            <Accordion
+          {activeOptionIndex === -1 && (
+       <>
+               <Accordion
               title={data.facts ? "facts" : "lifespan"}
               text={data.facts ? data.facts : data.lifespan}
               color="purple"
@@ -66,6 +68,8 @@ const ModalAstroDetails = ({
               text={data.Atmosphere ? data.Atmosphere : data.composition}
               color="green"
             />
+       </>
+          )}
             <StaticData
               title="temperature"
               value={data.temperature}

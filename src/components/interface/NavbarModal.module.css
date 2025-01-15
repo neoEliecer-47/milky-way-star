@@ -1,43 +1,43 @@
-.navContainer{
-    
-    height: 3rem;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(115, 139, 225, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.navContainer {
+  height: 3rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(115, 139, 225, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
- .navOption{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:  0.8rem;
-    width: 3rem;
-   z-index: 1;
-    color: #fff;
-    transition: background-color 0.5s, transform 0.5s ease;
-   
- }
+.navOption {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
 
- .navOption.active{
-    color: #ffffff;
- }
-
-.stack{
-    position: absolute;
-    height: 2.6rem;
-    border-radius: 10px;
-    background:  linear-gradient(60deg, rgb(184, 84, 215) 30%, rgb(57, 13, 168) 90%);
-    transition: transform 250ms ease;
-    z-index: 0;
-    pointer-events: none;
-    
+  width: 3rem;
+  outline: none;
+  z-index: 1;
+  color: #fff;
+  transition: background-color 250ms, transform 250ms ease;
+  cursor: pointer;
+  user-select: none;
 }
 
+.stack {
+  position: absolute;
+  height: 2.6rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    60deg,
+    rgb(184, 84, 215) 30%,
+    rgb(57, 13, 168) 90%
+  );
+  transition: transform 250ms ease;
+  z-index: 0;
+  pointer-events: none;
+}

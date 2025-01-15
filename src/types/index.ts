@@ -73,6 +73,12 @@ export type modalImagesProps = {
   images: astroImages[]
 }
 
+export type navbarModalProps = {
+  titles: string[];
+  activeOptionIndex: number;
+  updateOptionIndex: React.Dispatch<React.SetStateAction<number>>
+}
+
 export type readMoreProps = {
   title: string;
   text: string;
