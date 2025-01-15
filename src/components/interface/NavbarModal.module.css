@@ -34,8 +34,8 @@
     position: absolute;
     height: 2.6rem;
     border-radius: 10px;
-    background:  linear-gradient(65deg, rgb(184, 84, 215), rgb(57, 13, 168));
-    transition: transform 0.5s ease;
+    background:  linear-gradient(60deg, rgb(184, 84, 215) 30%, rgb(57, 13, 168) 90%);
+    transition: transform 250ms ease;
     z-index: 0;
     pointer-events: none;
     
