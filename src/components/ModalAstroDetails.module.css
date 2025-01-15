@@ -35,8 +35,8 @@
    background-color: aqua;
 }
 .wrapperStaticData{
-    padding: 0;
-    margin: 0;
+    padding: 5px;
+    margin: 10px 0;
     background-color: bisque;
 }
 
@@ -46,7 +46,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    backdrop-filter: brightness(40%);
+    backdrop-filter: brightness(35%);
     z-index: 900;
     padding: 0;
     margin: 0;

@@ -11,7 +11,7 @@ const NavbarModal = ({ titles }: { titles?: string[] }) => {
   }
   return (
     <nav className={styles.navContainer}>
-      <div className={styles.stack} style={{ transform: `translateX(${activeIndex * 100}%)`, width: `calc(70% / ${titles?.length})` }} />
+      <div className={styles.stack} style={{ transform: `translateX(${activeIndex * 100}%)`, width: `calc(90% / ${titles?.length})` }} />
       {titles?.map((title, index) => (
         <div
           key={index}
