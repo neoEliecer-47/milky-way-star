@@ -35,13 +35,15 @@ const ModalAstroDetails = ({
   return (
     <>
       <article ref={modalRef} className={styles.modalContainer}>
-        <NavbarModal titles={titles}/>
+       
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
               <AstroSurfaceImage images={data.images} />
               <h1 className={styles.name}>{data.name}</h1>
+              <NavbarModal titles={titles}/>
             </div>
+            <div className={styles.wrapperStaticData}>
             <StaticData title="type" text={data.type} />
             {data.position && (
               <StaticData
@@ -105,6 +107,7 @@ const ModalAstroDetails = ({
             />
             <StaticData title="mass" text={data.mass} />
             <ReadMore title="diameter" text={data.size} length={20}/>
+            </div>
           </>
         ))}
       </article>

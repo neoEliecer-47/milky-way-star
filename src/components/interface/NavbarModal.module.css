@@ -4,7 +4,9 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: blueviolet;
+    background-color: rgba(115, 139, 225, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +15,9 @@
 
  .navOption{
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding:  0.8rem;
     width: 3rem;
    z-index: 1;
@@ -28,7 +32,8 @@
 
 .stack{
     position: absolute;
-    height: 3rem;
+    height: 2.6rem;
+    border-radius: 10px;
     background-color: rgb(41, 161, 121);
     transition: transform 0.5s ease;
     z-index: 0;
