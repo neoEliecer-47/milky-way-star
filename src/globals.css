@@ -2,5 +2,7 @@ body {
    
     overflow: hidden;
     margin: 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
