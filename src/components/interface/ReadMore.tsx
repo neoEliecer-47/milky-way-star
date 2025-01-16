@@ -1,27 +1,31 @@
-import { useState } from "react"
-import { readMoreProps } from "../../types"
-import styles from './ReadMore.module.css'
-
+import { useRef, useState } from "react";
+import { readMoreProps } from "../../types";
+import styles from "./ReadMore.module.css";
 
 const ReadMore = ({ title, text, length }: readMoreProps) => {
-    const [isExpanded, setIsExpanded] = useState<boolean>(false)
-
-    function toggleReadMore(){
-        setIsExpanded(!isExpanded)
-    }
+  const [hiddenText, setHiddenText] = useState<boolean>(true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  function toggleReadMore() {
+    setHiddenText(!hiddenText);
+  }
   return (
-    <section className={styles.readMoreContainer}>
-        <h1 className={styles.title}>{title}</h1>
-        <span className={styles.text}>
-            {isExpanded ? text : `${text.slice(0, length)}`}
-        </span>
-        {text.length > length && (
-          <button className={styles.buttonReadMore} onClick={toggleReadMore}>
-            <span style={{ marginLeft: '3px' }}>{isExpanded ? 'read less' : '...read more'}</span>
-          </button>
-        )}
-    </section>
-  )
-}
+    <section className={styles.readMoreContainer} onClick={toggleReadMore}>
+      <h1 className={styles.title}>{title}</h1>
 
-export default ReadMore
+      <div
+        ref={containerRef}
+        className={styles.text}
+        style={{
+          height: hiddenText
+            ? "15px"
+            : `${containerRef.current?.scrollHeight}px`,
+        }}
+      >
+        {hiddenText ? `${text.slice(0, length)}... read more` : text}
+      </div>
+      
+    </section>
+  );
+};
+
+export default ReadMore;
