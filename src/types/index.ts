@@ -5,7 +5,7 @@ export type planetsProps = {
   id: number;
   moons?: moons[];
   moonsAnimationDuration?: number | null;
-  astroData: astroData[]
+  astroData: astroData[];
 };
 
 export type moonsProps = {
@@ -28,11 +28,11 @@ export type spaceLayerProps = {
 };
 
 export type modalAstroDetailsProps = {
-  astroData: astroData[],
-  isOpen: boolean,
-  toggleModal: React.Dispatch<React.SetStateAction<boolean>>,
-  index: number
-}
+  astroData: astroData[];
+  isOpen: boolean;
+  toggleModal: React.Dispatch<React.SetStateAction<boolean>>;
+  index: number;
+};
 
 interface moons {
   imgSrc: string;
@@ -56,36 +56,35 @@ export interface astroData {
   surface?: string;
   Atmosphere?: string;
   facts?: string;
-  position?: number,
-  ringSystem?: string,
-  weather?: string
-  images: astroImages[]
+  position?: number;
+  ringSystem?: string;
+  weather?: string;
+  images: astroImages[];
 }
 
 export type staticDataProps = {
-  title: string,
-  text?: string,
-  textBefore?: string,
-  textAfterwards?: string,
-  value?: number
-}
+  title: string;
+  text?: string;
+  textBefore?: string;
+  textAfterwards?: string;
+  value?: number;
+};
 
 export type modalImagesProps = {
-  images: astroImages[]
-}
+  images: astroImages[];
+};
 
 export type navbarModalProps = {
   titles: string[];
   activeOptionIndex: number;
-  updateOptionIndex: React.Dispatch<React.SetStateAction<number>>
-}
+  updateOptionIndex: React.Dispatch<React.SetStateAction<number>>;
+};
 
 export type readMoreProps = {
   title: string;
   text: string;
-  length: number; 
-}
+};
 
 interface astroImages {
-  imgSrc: string
+  imgSrc: string;
 }

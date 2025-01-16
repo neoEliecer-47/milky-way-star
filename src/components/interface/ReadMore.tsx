@@ -2,14 +2,14 @@ import { useRef, useState } from "react";
 import { readMoreProps } from "../../types";
 import styles from "./ReadMore.module.css";
 
-const ReadMore = ({ title, text, length }: readMoreProps) => {
+const ReadMore = ({ title, text }: readMoreProps) => {
   const [hiddenText, setHiddenText] = useState<boolean>(true);
   const containerRef = useRef<HTMLDivElement>(null);
   function toggleReadMore() {
     setHiddenText(!hiddenText);
   }
   return (
-    <section className={styles.readMoreContainer} onClick={toggleReadMore}>
+    <section className={styles.readMoreContainer} onClick={toggleReadMore} style={{animation: !hiddenText ? 'none' : ''}}>
       <h1 className={styles.title}>{title}</h1>
 
       <div
@@ -17,11 +17,11 @@ const ReadMore = ({ title, text, length }: readMoreProps) => {
         className={styles.text}
         style={{
           height: hiddenText
-            ? "15px"
+            ? "0px"
             : `${containerRef.current?.scrollHeight}px`,
         }}
       >
-        {hiddenText ? `${text.slice(0, length)}... read more` : text}
+        {text}
       </div>
       
     </section>

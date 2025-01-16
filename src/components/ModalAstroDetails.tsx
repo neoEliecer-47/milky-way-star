@@ -138,7 +138,7 @@ const ModalAstroDetails = ({
                   <ReadMore
                     title="diameter"
                     text={data.size ? data.size : "unknown"}
-                    length={10}
+                   
                   />
                 </>
               )}
