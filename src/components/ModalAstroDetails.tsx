@@ -22,8 +22,8 @@ const ModalAstroDetails = ({
     }
   }
 
-  function buildBackgroundGradientForEachAstro(index: number){
-    return planetColors[index]
+  function buildBackgroundGradientForEachAstro(index: number) {
+    return planetColors[index];
   }
 
   useEffect(() => {
@@ -43,12 +43,13 @@ const ModalAstroDetails = ({
           <>
             <div className={styles.headerModalContainer}>
               <AstroSurfaceImage images={data.images} />
-              
+
               <h1
                 className={styles.name}
                 style={{
-                  background:
-                    `linear-gradient(to left, ${buildBackgroundGradientForEachAstro(data.id)}`,
+                  background: `linear-gradient(to left, ${buildBackgroundGradientForEachAstro(
+                    data.id
+                  )}`,
                 }}
               >
                 {data.name}
@@ -61,7 +62,7 @@ const ModalAstroDetails = ({
             </div>
             <div className={styles.wrapperStaticData}>
               {activeOptionIndex === 0 && (
-                <>
+                <div style={{ padding: '2px', margin: '0 auto', height: '100%' }}>
                   <StaticData title="type" text={data.type} />
                   {data.position && (
                     <StaticData
@@ -84,7 +85,7 @@ const ModalAstroDetails = ({
                     textAfterwards={data.name === "sun" ? " million °C" : "°C"}
                   />
                   <StaticData title="mass" text={data.mass} />
-                </>
+                </div>
               )}
 
               {activeOptionIndex === -1 && (
@@ -138,7 +139,6 @@ const ModalAstroDetails = ({
                   <ReadMore
                     title="diameter"
                     text={data.size ? data.size : "unknown"}
-                   
                   />
                 </>
               )}
