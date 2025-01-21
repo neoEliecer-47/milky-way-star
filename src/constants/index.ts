@@ -48,7 +48,7 @@ export const planets: planetsProps[] = [
     imgSrc: sunImg,
     id: 0,
     astroData: [
-      {
+      {//every astro data array has only one object: that means only one position -> 0
         id: 0,
         name: "sun",
         type: "yellow dwarf star",
@@ -316,13 +316,13 @@ export const astrosTitleColors = [
 
 
 export const astrosShadowColorsModal = [
-  'rgba(241, 188, 14, 0.77)',
-  'rgba(100, 100, 100, 0.3)',
-  'rgba(231, 100, 34, 0.76)',
+  'rgb(224, 180, 35)',
+  'rgb(100, 100, 100)',
+  'rgb(231, 100, 34)',
   'rgba(9, 211, 46, 0.71)',
   'rgba(230, 16, 16, 0.78)',
-  'rgba(218, 174, 31, 0.64)',
-  'rgba(231, 145, 25, 0.78)',
+  'rgba(247, 165, 118, 0.7)',
+  'rgba(138, 129, 8, 0.943)',
   'rgba(97, 221, 230, 0.84)',
   'rgba(0, 0, 255, 0.5)',
 ]

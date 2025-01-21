@@ -15,7 +15,7 @@ const ModalAstroDetails = ({
 }: modalAstroDetailsProps) => {
   const modalRef = useRef<HTMLElement | null>(null);
   const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
-
+  console.log(activeOptionIndex)
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
       toggleModal(false);
@@ -43,7 +43,7 @@ const ModalAstroDetails = ({
   return (
     <>
   
-      <article ref={modalRef} className={styles.modalContainer} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(0)}` }}>
+      <article ref={modalRef} className={styles.modalContainer} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(astroData[0].id)}` }}>
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>

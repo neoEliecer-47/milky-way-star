@@ -62,7 +62,6 @@ const AstroDetails = ({
                   }deg) scale(${scale})`,
                   zIndex: zIndex,
                   opacity: offset < -2 || offset > 2 ? 0 : 1,
-
                   width: buildSize("width"),
                 }} //hide distant elements
                 onClick={() => handleCLick(index)}
