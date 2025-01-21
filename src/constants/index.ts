@@ -301,7 +301,7 @@ export const planets: planetsProps[] = [
   },
 ];
 
-export const planetColors = [
+export const astrosTitleColors = [
   'rgb(224, 180, 35), rgb(247, 84, 20)',
   'rgba(100, 100, 100, 0.3), rgb(100, 100, 100)',
   'rgb(231, 100, 34), rgb(194, 69, 6)',
@@ -312,4 +312,17 @@ export const planetColors = [
   'rgba(118, 200, 206, 0.943),  rgba(135, 136, 190, 0.943)',
   'blue, rgba(92, 53, 185, 0.943)',
 
+]
+
+
+export const astrosShadowColorsModal = [
+  'rgba(241, 188, 14, 0.77)',
+  'rgba(100, 100, 100, 0.3)',
+  'rgba(231, 100, 34, 0.76)',
+  'rgba(9, 211, 46, 0.71)',
+  'rgba(230, 16, 16, 0.78)',
+  'rgba(218, 174, 31, 0.64)',
+  'rgba(231, 145, 25, 0.78)',
+  'rgba(97, 221, 230, 0.84)',
+  'rgba(0, 0, 255, 0.5)',
 ]

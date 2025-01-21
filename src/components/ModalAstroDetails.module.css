@@ -3,11 +3,11 @@
   margin: auto;
   
 background-color: rgba(red, green, blue, 0.5);
-backdrop-filter: blur(15px);
+backdrop-filter: blur(10px);
   
   height: fit-content;
   width: 18rem;
-  padding: 2.5rem;
+  padding: 1.8rem;/* desktop more than 2.5rem */
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
   inset: 0;
@@ -16,7 +16,8 @@ backdrop-filter: blur(15px);
   
   scrollbar-width: none;
   scroll-behavior: smooth;
-  border: solid 5px green;
+  
+
   
 }
 

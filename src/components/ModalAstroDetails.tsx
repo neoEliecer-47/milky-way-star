@@ -6,7 +6,7 @@ import StaticData from "./StaticData";
 import Accordion from "./interface/Accordion";
 import ReadMore from "./interface/ReadMore";
 import NavbarModal from "./interface/NavbarModal";
-import { planetColors } from "../constants";
+import { astrosShadowColorsModal, astrosTitleColors } from "../constants";
 
 const ModalAstroDetails = ({
   astroData,
@@ -22,8 +22,12 @@ const ModalAstroDetails = ({
     }
   }
 
+  function buildBoxShadowForEachAstro(index: number) {
+    return astrosShadowColorsModal[index];
+  }
+
   function buildBackgroundGradientForEachAstro(index: number) {
-    return planetColors[index];
+    return astrosTitleColors[index];
   }
 
   useEffect(() => {
@@ -38,7 +42,8 @@ const ModalAstroDetails = ({
 
   return (
     <>
-      <article ref={modalRef} className={styles.modalContainer}>
+  
+      <article ref={modalRef} className={styles.modalContainer} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(0)}` }}>
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
