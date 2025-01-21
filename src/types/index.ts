@@ -31,7 +31,7 @@ export type modalAstroDetailsProps = {
   astroData: astroData[];
   isOpen: boolean;
   toggleModal: React.Dispatch<React.SetStateAction<boolean>>;
-  index: number;
+ 
 };
 
 interface moons {

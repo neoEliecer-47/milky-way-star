@@ -11,7 +11,7 @@ const AstroDetails = ({
   handleCLick,
 }: dataAstrosProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [data, setData] = useState<astroData[]>();
+  const [data, setData] = useState<astroData[]>([]);
 
   function toggleModal(idAstro: number) {
     const planetsData = dataAstros.filter(({ id }) => id === idAstro);
