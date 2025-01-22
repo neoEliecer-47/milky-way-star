@@ -72,6 +72,7 @@ export type staticDataProps = {
 
 export type modalImagesProps = {
   images: astroImages[];
+  onCloseModal: () => void;
 };
 
 export type navbarModalProps = {
