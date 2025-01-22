@@ -7,6 +7,7 @@ import Accordion from "./interface/Accordion";
 import ReadMore from "./interface/ReadMore";
 import NavbarModal from "./interface/NavbarModal";
 import { astrosShadowColorsModal, astrosTitleColors } from "../constants";
+import classNames from "classnames";
 
 
 
@@ -14,15 +15,25 @@ const ModalAstroDetails = ({
   astroData,
   toggleModal,
 }: modalAstroDetailsProps) => {
+  const [isClosing, setIsClosing] = useState<boolean>(false)
+  const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
   const modalRef = useRef<HTMLElement | null>(null);
 
-  const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
 
-  console.log(activeOptionIndex)
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-      toggleModal(false);
+      handleCloseModal();
     }
+  }
+
+  function handleCloseModal() {
+    setIsClosing(true); //trigger the closing animation
+
+    //wait for the animation to complete
+    setTimeout(() => {
+      setIsClosing(false);
+      toggleModal(false);
+    }, 450);
   }
 
   function buildBoxShadowForEachAstro(index: number) {
@@ -46,7 +57,7 @@ const ModalAstroDetails = ({
   return (
  
   <>
-      <article ref={modalRef} className={styles.modalContainer} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(astroData[0].id)}` }}>
+      <article ref={modalRef} className={classNames(styles.modalContainer, isClosing && styles.modalClosingAnimation)} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(astroData[0].id)}` }}>
         
         {astroData.map((data) => (
           <>
