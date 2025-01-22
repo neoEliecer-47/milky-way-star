@@ -15,7 +15,7 @@ const CoverflowSlider = () => {
       className={styles.CoverflowSlider}
       style={{ padding: "6rem", marginRight: "22rem" }}
     >
-      <div className={styles.slides} style={{ flexDirection: "column" }}>
+      <div className={styles.slides}>
         <AstroDetails
           dataAstros={planets}
           currentIndex={currentIndex}

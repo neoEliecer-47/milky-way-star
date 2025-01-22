@@ -6,22 +6,22 @@ import AccordionArrow from "./AccordionArrow";
 const Accordion = ({
   title,
   text,
-  color
+  color,
 }: {
   title: string;
   text: string | undefined;
-  color?: string
+  color?: string;
 }) => {
   const [hiddenContent, setHiddenContent] = useState(true);
   const accordionRef = useRef<HTMLDivElement>(null);
-    function buildBackground(){
-        if(color === 'green'){
-            return 'rgba(197, 231, 154, 0.9)'
-        }else if(color === 'purple') {
-            return 'rgba(217, 170, 217, 0.9)'
-        }
-        return 'rgba(193, 157, 149, 0.9)'
+  function buildBackground() {
+    if (color === "green") {
+      return "rgba(197, 231, 154, 0.9)";
+    } else if (color === "purple") {
+      return "rgba(217, 170, 217, 0.9)";
     }
+    return "rgba(193, 157, 149, 0.9)";
+  }
   function handleAccordion() {
     return setHiddenContent(!hiddenContent);
   }
@@ -37,7 +37,13 @@ const Accordion = ({
         >
           {title}
         </summary>
-        <AccordionArrow stroke={5} className={classNames(styles.arrow,  !hiddenContent && styles.arrwAnimation)}/>
+        <AccordionArrow
+          stroke={5}
+          className={classNames(
+            styles.arrow,
+            !hiddenContent && styles.arrwAnimation
+          )}
+        />
       </div>
       <div
         ref={accordionRef}

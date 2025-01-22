@@ -10,6 +10,7 @@
   perspective: 1000px; /* For 3D effect */
   overflow: hidden;
   position: relative;
+
 }
 
 .slides {
