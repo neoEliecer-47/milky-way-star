@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
-margin: 0 0.4rem;
+  margin: 0 0.4rem;
   width: 3rem;
   outline: none;
   z-index: 1;
@@ -41,4 +41,10 @@ margin: 0 0.4rem;
   transition: transform 250ms ease;
   z-index: 0;
   pointer-events: none;
+}
+
+@media screen and (min-width: 1000px){
+  .navOption{
+    margin: 0 1rem;
+  }
 }

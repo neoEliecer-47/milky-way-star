@@ -49,7 +49,7 @@ const ModalAstroDetails = ({
     };
   }, []);
 
-  const titles = ["features", "atribbute", "aspects"];
+  const titles = ["features", "atribbutes", "aspects"];
 
   return (
     <>
