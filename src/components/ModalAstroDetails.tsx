@@ -82,7 +82,7 @@ const ModalAstroDetails = ({
             </div>
             <div className={styles.wrapperStaticData}>
               {activeOptionIndex === 0 && (
-                <div style={{ padding: '2px', margin: '0 auto', height: '100%' }}>
+                <div className={styles.wrapperEachData}>
                   <StaticData title="type" text={data.type} />
                   {data.position && (
                     <StaticData
@@ -109,7 +109,7 @@ const ModalAstroDetails = ({
               )}
 
               {activeOptionIndex === -1 && (
-                <>
+                <div className={styles.wrapperEachData}>
                   <Accordion
                     title={data.facts ? "facts" : "lifespan"}
                     text={data.facts ? data.facts : data.lifespan}
@@ -122,11 +122,11 @@ const ModalAstroDetails = ({
                     text={data.Atmosphere ? data.Atmosphere : data.composition}
                     color="green"
                   />
-                </>
+                </div>
               )}
 
               {activeOptionIndex === 1 && (
-                <>
+                <div className={styles.wrapperEachData}>
                   {data.orbitalPeriod && (
                     <StaticData
                       title="orbital period"
@@ -165,7 +165,7 @@ const ModalAstroDetails = ({
                     title="gravity"
                     text={data.gravity}
                   />
-                </>
+                </div>
               )}
             </div>
           </>
