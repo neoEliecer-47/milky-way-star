@@ -1,59 +1,54 @@
 .containerTitle {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  
-  .container {
-    margin: 0.7rem 0;
-    cursor: pointer;
-    width: 100%;
-    background-color: rgba(193, 157, 149, 0.7);
-    border-radius: 5px;
-    border: solid 0.2px rgba(0, 0, 0, 0.3);
-    
-  }
-  .content {
-    overflow: hidden;
-    height: 0;
-    transition: height 250ms ease;
-   
-  }
-  
-  .content::first-letter{
-    text-transform: capitalize;
-  }
-  
-  .contentActive {
-  
-    cursor: pointer;
-  }
-  
-  
-  
-  .summary {
-    width: 100%;
-    padding: 0 0.5rem;
-    cursor: pointer;
-    height: auto;
-    font-weight: 700;
-  }
-  
-  .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: all 750ms;
-    background-color: white;
-    opacity: 0.8;
-    padding: 0 5px;
-  }
-  
-  .arrwAnimation {
-    transform: rotate(180deg);
-  }
-  
-  .parrafo {
-    padding: 0;
-    margin: 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.container {
+  margin: 0.7rem 0;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgba(193, 157, 149, 0.7);
+  border-radius: 5px;
+  border: solid 0.2px rgba(0, 0, 0, 0.3);
+}
+.content {
+  overflow: hidden;
+  height: 0;
+  transition: height 250ms ease;
+}
+
+.content::first-letter {
+  text-transform: capitalize;
+}
+
+.contentActive {
+  cursor: pointer;
+}
+
+.summary {
+  width: 100%;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  height: auto;
+  font-weight: 700;
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 750ms;
+  background-color: white;
+  opacity: 0.8;
+  padding: 0 5px;
+}
+
+.arrwAnimation {
+  transform: rotate(180deg);
+}
+
+.parrafo {
+  padding: 0;
+  margin: 0;
+}

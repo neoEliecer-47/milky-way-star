@@ -18,18 +18,15 @@ const NavbarModal = ({
       <div
         className={styles.stack}
         style={{
-          transform: `translateX(${activeOptionIndex * 100}%)`,
-          width: `calc(90% / ${titles?.length})`,
+          transform: `translateX(${activeOptionIndex * 100}%)`,//moves the stack to the left or right depending on the activeOptionIndex
+          width: `calc(90% / ${titles?.length})`,//calculates the width depending on the number of titles
         }}
       />
       {titles?.map((title, index) => (
         <div
           key={index}
           onClick={() => handleActiveStack(index - 1)}
-          className={classNames(
-            styles.navOption,
-            index === activeOptionIndex ? styles.active : ""
-          )}
+          className={styles.navOption}
         >
           {title}
         </div>

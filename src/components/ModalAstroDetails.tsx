@@ -9,16 +9,13 @@ import NavbarModal from "./interface/NavbarModal";
 import { astrosShadowColorsModal, astrosTitleColors } from "../constants";
 import classNames from "classnames";
 
-
-
 const ModalAstroDetails = ({
   astroData,
   toggleModal,
 }: modalAstroDetailsProps) => {
-  const [isClosing, setIsClosing] = useState<boolean>(false)
+  const [isClosing, setIsClosing] = useState<boolean>(false);
   const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
   const modalRef = useRef<HTMLElement | null>(null);
-
 
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
@@ -55,10 +52,19 @@ const ModalAstroDetails = ({
   const titles = ["features", "atribbute", "aspects"];
 
   return (
- 
-  <>
-      <article ref={modalRef} className={classNames(styles.modalContainer, isClosing && styles.modalClosingAnimation)} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(astroData[0].id)}` }}>
-        
+    <>
+      <article
+        ref={modalRef}
+        className={classNames(
+          styles.modalContainer,
+          isClosing && styles.modalClosingAnimation
+        )}
+        style={{
+          boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(
+            astroData[0].id
+          )}`,
+        }}
+      >
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
@@ -116,7 +122,7 @@ const ModalAstroDetails = ({
                     color="purple"
                   />
                   <Accordion title="surface" text={data.surface} />
-                  
+
                   <Accordion
                     title={data.Atmosphere ? "atmosphere" : "composition"}
                     text={data.Atmosphere ? data.Atmosphere : data.composition}
@@ -161,10 +167,7 @@ const ModalAstroDetails = ({
                     title="diameter"
                     text={data.size ? data.size : "unknown"}
                   />
-                   <ReadMore
-                    title="gravity"
-                    text={data.gravity}
-                  />
+                  <ReadMore title="gravity" text={data.gravity} />
                 </div>
               )}
             </div>
@@ -172,7 +175,7 @@ const ModalAstroDetails = ({
         ))}
       </article>
       <div className={styles.bgBlur} />
-      </>
+    </>
   );
 };
 
