@@ -8,13 +8,16 @@ import ReadMore from "./interface/ReadMore";
 import NavbarModal from "./interface/NavbarModal";
 import { astrosShadowColorsModal, astrosTitleColors } from "../constants";
 
+
+
 const ModalAstroDetails = ({
   astroData,
-  isOpen,
   toggleModal,
 }: modalAstroDetailsProps) => {
   const modalRef = useRef<HTMLElement | null>(null);
+
   const [activeOptionIndex, setActiveOptionIndex] = useState<number>(-1);
+
   console.log(activeOptionIndex)
   function handleClickOutside(e: MouseEvent) {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
@@ -41,9 +44,10 @@ const ModalAstroDetails = ({
   const titles = ["title1", "title2", "title3"];
 
   return (
-    <>
-  
+ 
+  <>
       <article ref={modalRef} className={styles.modalContainer} style={{ boxShadow: `0px 2px 13px 3px ${buildBoxShadowForEachAstro(astroData[0].id)}` }}>
+        
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
@@ -152,7 +156,7 @@ const ModalAstroDetails = ({
         ))}
       </article>
       <div className={styles.bgBlur} />
-    </>
+      </>
   );
 };
 

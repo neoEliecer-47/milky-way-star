@@ -19,7 +19,7 @@ const AstroDetails = ({
     setIsOpen(!isOpen);
   }
 
-  function buildScale(offset: number) {
+  function buildScale(offset: number) {//position of the slide (astros which are closer or farther from the center)
     if (offset === -2 || offset === 2) {
       return 0.6;
     }
@@ -29,8 +29,7 @@ const AstroDetails = ({
   return (
     <>
       {isOpen && (
-        <ModalAstroDetails
-          isOpen={isOpen}
+         <ModalAstroDetails
           astroData={data}
           toggleModal={setIsOpen}
         />

@@ -29,7 +29,6 @@ export type spaceLayerProps = {
 
 export type modalAstroDetailsProps = {
   astroData: astroData[];
-  isOpen: boolean;
   toggleModal: React.Dispatch<React.SetStateAction<boolean>>;
  
 };

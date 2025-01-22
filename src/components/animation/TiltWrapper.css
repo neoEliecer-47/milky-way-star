@@ -1,0 +1,13 @@
+.tilt-container{
+    perspective: 1000px;
+    transition:  transform 0.2s ease-out;
+    z-index: 9999;
+    transform-style: preserve-3d;
+    
+}
+
+.tilt-container > * {
+    transform-style: preserve-3d;
+    will-change: transform;
+   
+}
