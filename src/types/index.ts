@@ -59,6 +59,7 @@ export interface astroData {
   ringSystem?: string;
   weather?: string;
   images: astroImages[];
+  gravity: string;
 }
 
 export type staticDataProps = {

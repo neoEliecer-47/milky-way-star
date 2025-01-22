@@ -52,7 +52,7 @@ const ModalAstroDetails = ({
     };
   }, []);
 
-  const titles = ["title1", "title2", "title3"];
+  const titles = ["features", "atribbute", "aspects"];
 
   return (
  
@@ -116,6 +116,7 @@ const ModalAstroDetails = ({
                     color="purple"
                   />
                   <Accordion title="surface" text={data.surface} />
+                  
                   <Accordion
                     title={data.Atmosphere ? "atmosphere" : "composition"}
                     text={data.Atmosphere ? data.Atmosphere : data.composition}
@@ -159,6 +160,10 @@ const ModalAstroDetails = ({
                   <ReadMore
                     title="diameter"
                     text={data.size ? data.size : "unknown"}
+                  />
+                   <ReadMore
+                    title="gravity"
+                    text={data.gravity}
                   />
                 </>
               )}

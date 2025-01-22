@@ -1,10 +1,17 @@
 .readMoreContainer {
   margin: 0;
   padding: 5px;
-  background-color: aquamarine;
+  background-color: rgba(244, 135, 184, 0.6);
   border-radius: 10px;
   cursor: pointer;
   animation: shake 2.2s ease infinite;
+  margin-bottom: 0.5rem;
+}
+
+.gravityStyles{
+  background-color: aquamarine;
+  border: solid 0.2px rgba(0, 0, 0, 0.304) ;
+  
 }
 
 .title {
