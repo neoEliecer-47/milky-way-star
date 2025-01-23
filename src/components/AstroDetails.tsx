@@ -37,6 +37,7 @@ const AstroDetails = ({
           toggleModal={setIsOpen}
         />
       )}
+       
       {dataAstros.map(
         ({ imgSrc, id, moons, moonsAnimationDuration, astroData }, index) => {
           //calculate slide position based on index
@@ -48,13 +49,17 @@ const AstroDetails = ({
 
             if (property === "img") {
               if (isMobile) {
-                return sun ? "20rem" : "15rem";
+                return sun ? "17rem" : "12.8rem";
               }
               return sun ? "33rem" : "20rem";
             }
 
-            if (sun && property === "width") return "430px";
-            else "350px";
+            if(property === 'widthSlider'){
+              if (isMobile) {
+                return sun ? "225px" : "205px";
+              }
+              return sun ? "430px" : "320px";
+            }
           }
 
           return (
@@ -68,10 +73,11 @@ const AstroDetails = ({
                   }deg) scale(${scale})`,
                   zIndex: zIndex,
                   opacity: offset < -2 || offset > 2 ? 0 : 1,
-                  width: buildSize("width"),
+                  width: buildSize("widthSlider"),
                 }} //hide distant elements
                 onClick={() => handleCLick(index)}
               >
+                
                 {moons && moonsAnimationDuration && (
                   <MoonSlider
                     moons={moons}
@@ -111,6 +117,7 @@ const AstroDetails = ({
           );
         }
       )}
+     
     </>
   );
 };

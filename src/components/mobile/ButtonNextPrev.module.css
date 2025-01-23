@@ -1,0 +1,8 @@
+.containerButtons{
+    width: 5rem;
+    z-index: 1000;
+    transform: translateY(27rem) translateX(2rem); 
+    display: flex;
+    justify-content: space-between; 
+    gap: 7rem;
+}
