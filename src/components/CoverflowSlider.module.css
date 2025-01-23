@@ -11,6 +11,7 @@
   overflow: hidden;
   position: relative;
 
+
 }
 
 .slides {
@@ -31,7 +32,8 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
 
-  height: 500px;
+  height: 350px;
+  width: 200px;
   border-radius: 5rem;
   display: flex;
   flex-direction: column;
@@ -56,6 +58,11 @@
   z-index: -2;
   transition: all 1.2s ease;
 }
+
+.astroImg{
+  width: 50px;
+  height: 20px;
+}
 .slide:hover::after {
   opacity: 1;
   bottom: 0;
@@ -69,4 +76,11 @@
 
 .slide:hover .containerCustomButton {
   transform: translateY(-2rem);
+}
+
+@media screen and (min-width: 1000px){
+  .slide{
+    height: 500px;
+    width: 320px;
+  }
 }

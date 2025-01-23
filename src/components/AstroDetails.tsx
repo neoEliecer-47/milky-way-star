@@ -51,7 +51,7 @@ const AstroDetails = ({
           }
 
           return (
-            <>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
               <div
                 key={id}
                 className={`${styles.slide} ${offset === 0 ? "active" : ""}`}
@@ -82,6 +82,7 @@ const AstroDetails = ({
                     zIndex: "-2",
                     marginTop: !moons ? "5rem" : "",
                   }}
+                  className={styles.astroImg}
                 />
                 <div
                   style={{
@@ -99,7 +100,7 @@ const AstroDetails = ({
                   </section>
                 </div>
               </div>
-            </>
+            </div>
           );
         }
       )}
