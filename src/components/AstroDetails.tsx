@@ -4,6 +4,7 @@ import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
 import MoonSlider from "./MoonSlider";
 import ModalAstroDetails from "./ModalAstroDetails";
+import useIsMobileScreenDetector from "../hooks/useScreenDetector";
 
 const AstroDetails = ({
   dataAstros,
@@ -12,6 +13,8 @@ const AstroDetails = ({
 }: dataAstrosProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [data, setData] = useState<astroData[]>([]);
+  const { isMobile } = useIsMobileScreenDetector()
+  console.log(isMobile)
 
   function toggleModal(idAstro: number) {
     const planetsData = dataAstros.filter(({ id }) => id === idAstro);
@@ -41,12 +44,16 @@ const AstroDetails = ({
           const scale = buildScale(offset); //larger scale for the active slide
           const zIndex = offset === 0 ? 10 : 5; //higher z-index for the active slide
           function buildSize(property: string) {
-            const condition = astroData[0].name === "sun";
+            const sun = astroData[0].name === "sun";
 
-            if (condition && property === "img") return "33rem";
-            else if (property === "img") return "20rem";
+            if (property === "img") {
+              if (isMobile) {
+                return sun ? "20rem" : "15rem";
+              }
+              return sun ? "33rem" : "20rem";
+            }
 
-            if (condition && property === "width") return "430px";
+            if (sun && property === "width") return "430px";
             else "350px";
           }
 
