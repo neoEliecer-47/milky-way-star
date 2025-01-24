@@ -40,6 +40,9 @@
   overflow: hidden;
   padding: 0;
   margin: 0;
+  height: 7rem;
+  width: 10rem;
+  aspect-ratio: 3/4;
 }
 
 .image {
