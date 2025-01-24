@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./ButtonNextPrev.module.css";
+import ArrowLeftIcon from "../icons/ArrowLeftIcon";
+import ArrowRightIcon from "../icons/ArrowRightIcon";
 
 type ButtonsNextPrevSliderProps = {
   currentIndex: number;
@@ -32,16 +34,16 @@ const ButtonsNextPrevSlider = ({
   return (
     <div className={styles.containerButtons}>
       <button
-        style={{ padding: "0.5rem" }}
+        className={styles.buttons}
         onClick={() => buildSlidersPosition("prev")}
       >
-        prev
+        <ArrowLeftIcon />
       </button>
       <button
-        style={{ padding: "0.5rem" }}
+       className={styles.buttons}
         onClick={() => buildSlidersPosition("next")}
       >
-        next
+        <ArrowRightIcon />
       </button>
     </div>
   );

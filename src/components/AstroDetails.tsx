@@ -28,7 +28,8 @@ const AstroDetails = ({
     }
     return offset === 0 ? 1.2 : 0.8;
   }
-
+  //230px mobile width
+//"430px" : "320px"; //slider width in desktop
   return (
     <>
       {isOpen && (
@@ -44,23 +45,24 @@ const AstroDetails = ({
           const offset = index - currentIndex;
           const scale = buildScale(offset); //larger scale for the active slide
           const zIndex = offset === 0 ? 10 : 5; //higher z-index for the active slide
-          function buildSize(property: string) {
-            const sun = astroData[0].name === "sun";
+          const sun = astroData[0].name === "sun";
+          // function buildSize(property: string) {
+          //  
 
-            if (property === "img") {
-              if (isMobile) {
-                return sun ? "17rem" : "12.8rem";
-              }
-              return sun ? "33rem" : "20rem";
-            }
+          //   if (property === "img") {
+          //     if (isMobile) {
+          //       return "12.8rem";
+          //     }
+          //     return  "20rem";
+          //   }
 
-            if(property === 'widthSlider'){
-              if (isMobile) {
-                return sun ? "225px" : "205px";
-              }
-              return sun ? "430px" : "320px";
-            }
-          }
+          //   if(property === 'widthSlider'){
+          //     if (isMobile) {
+          //       return sun ? "250px" : "230px";
+          //     }
+          //     return sun ? "430px" : "320px";
+          //   }
+          // }
 
           return (
             <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -73,7 +75,7 @@ const AstroDetails = ({
                   }deg) scale(${scale})`,
                   zIndex: zIndex,
                   opacity: offset < -2 || offset > 2 ? 0 : 1,
-                  width: buildSize("widthSlider"),
+                  
                 }} //hide distant elements
                 onClick={() => handleCLick(index)}
               >
@@ -89,8 +91,8 @@ const AstroDetails = ({
                   src={imgSrc}
                   alt={astroData[id]?.name}
                   style={{
-                    height: buildSize("img"),
-                    width: buildSize("img"),
+                    width: sun ? '400px' : '',
+                    height: sun ? '400px' : '',
                     position: "relative",
                     zIndex: "-2",
                     marginTop: !moons ? "5rem" : "",

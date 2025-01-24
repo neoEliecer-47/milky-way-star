@@ -1,8 +1,29 @@
 .containerButtons{
     width: 5rem;
-    z-index: 1000;
-    transform: translateY(27rem) translateX(2rem); 
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    transform: translateY(43rem) translateX(2rem); 
     display: flex;
     justify-content: space-between; 
     gap: 7rem;
+}
+
+.buttons{
+    width: 5rem;
+    height: 2.6rem;
+    border-radius: 100px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    border: solid 0.5px rgba(255, 255, 255, 0.204)
+}
+
+@media screen and (max-width: 376px){
+    .containerButtons{
+        transform: translateY(31rem)
+    }
 }
