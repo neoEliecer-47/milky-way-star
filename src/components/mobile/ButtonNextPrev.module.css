@@ -24,6 +24,12 @@
 
 @media screen and (max-width: 376px){
     .containerButtons{
-        transform: translateY(31rem)
+        transform: translateY(31rem) translateX(3.5rem)
+    }
+}
+
+@media screen and (min-width: 430px){
+    .containerButtons{
+        transform: translateY(41rem) translateX(3.5rem)
     }
 }

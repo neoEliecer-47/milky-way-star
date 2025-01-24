@@ -103,3 +103,9 @@
     left: -22px;
   }
 }
+
+@media screen and (min-width: 1440px){
+  .slides{
+    height: 25rem;
+  }
+}
