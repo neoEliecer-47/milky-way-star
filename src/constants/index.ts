@@ -16,7 +16,7 @@ import enceladusStaurnImg from "../assets/moon/enceladus-saturn.avif";
 import europaJupiterImg from "../assets/moon/europa-jupiter.avif";
 import callistoJupiterImg from "../assets/moon/callisto-jupiter.avif";
 import ganymedeJupiterMoon from "../assets/moon/ganymede-moon-jupiter.avif";
-import ioJupiterImg from "../assets/moon/Io-jupiter.avif";
+import ioJupiterImg from "../assets/moon/io-jupiter.avif";
 import titaniaUranusMoon from "../assets/moon/titania-uranus-moon.avif";
 import umbrielUranusMoon from "../assets/moon/umbriel-uranus-moon.avif";
 import tritonNeptuneMoon from "../assets/moon/triton-neptune-moon.avif";
