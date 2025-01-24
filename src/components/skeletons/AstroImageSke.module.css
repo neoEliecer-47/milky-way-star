@@ -6,9 +6,9 @@
   border-radius: 100%;
   padding: 0;
   margin: 0;
-  background: linear-gradient(90deg, #0e0e0e00 50%, #f5f5f5 50%, #0e0e0e00 75%);
+  background: linear-gradient(90deg, #0e0e0e00 50%, #f5f5f58c 50%, #0e0e0e00 75%);
   background-size: 200% 100%;
-  animation: skeleton-loading 1s infinite linear
+  animation: skeleton-loading 1.5s infinite linear
 }
 
 @keyframes skeleton-loading {
