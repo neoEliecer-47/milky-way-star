@@ -27,5 +27,3 @@ export function generateSpaceLayer({
     divRef.current.style.setProperty("--duration", duration);
   }
 }
-
-

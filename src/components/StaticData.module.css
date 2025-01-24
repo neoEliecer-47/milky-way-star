@@ -17,8 +17,8 @@
   white-space: wrap;
 }
 
-.text::first-letter{
-    text-transform: capitalize;
+.text::first-letter {
+  text-transform: capitalize;
 }
 
 .title {

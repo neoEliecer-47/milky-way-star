@@ -5,7 +5,8 @@ import CloseIcon from "./icons/CloseIcon";
 import AstroSurfaceImageSke from "./skeletons/AstroSurfaceImageSke";
 
 const AstroSurfaceImage = ({ images, onCloseModal }: modalImagesProps) => {
-  const [isSurfaceImageLoaded, setIsSurfaceImageLoaded] = useState<boolean>(false)
+  const [isSurfaceImageLoaded, setIsSurfaceImageLoaded] =
+    useState<boolean>(false);
   return (
     <section style={{ width: "100%" }}>
       <div className={styles.buttonContainer}>
@@ -22,7 +23,7 @@ const AstroSurfaceImage = ({ images, onCloseModal }: modalImagesProps) => {
               key={index}
               alt="astro-surface"
               className={styles.image}
-              onLoad={()=> setIsSurfaceImageLoaded(true)}
+              onLoad={() => setIsSurfaceImageLoaded(true)}
             />
           </figure>
         ))}

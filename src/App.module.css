@@ -5,15 +5,13 @@
   background-color: #171717;
   overflow: hidden;
   background-image: linear-gradient(#051327, #2d1e1e);
- position: fixed;
- inset: 0;
+  position: fixed;
+  inset: 0;
 }
 
-.spaceOne{
+.spaceOne {
   --size: 2px;
-  --space-layer: 
-    4vw 50vh 0 #fff,
-    18vw 88vh #fff;
+  --space-layer: 4vw 50vh 0 #fff, 18vw 88vh #fff;
 
   width: var(--size);
   height: var(--size);

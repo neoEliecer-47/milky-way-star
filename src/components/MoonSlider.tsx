@@ -6,7 +6,7 @@ import MoonImageSke from "./skeletons/MoonImageSke";
 const MoonSlider = ({ moons, animationDuration }: moonsProps) => {
   const totalMoons = moons.length;
   const radius = 50;
-  const [isMoonImageLoaded, setIsMoonImageLoaded] = useState<boolean>(false)
+  const [isMoonImageLoaded, setIsMoonImageLoaded] = useState<boolean>(false);
   return (
     <div className={styles.sliderContainer}>
       <div
@@ -31,7 +31,7 @@ const MoonSlider = ({ moons, animationDuration }: moonsProps) => {
                 alt={moon.alt}
                 className={styles.moonImage}
                 style={{ opacity: isMoonImageLoaded ? 1 : 0 }}
-                onLoad={()=> setIsMoonImageLoaded(true)}
+                onLoad={() => setIsMoonImageLoaded(true)}
               />
             </div>
           );

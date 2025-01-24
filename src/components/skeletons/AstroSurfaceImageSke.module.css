@@ -1,18 +1,22 @@
-.surfaceImgContainer{
-    width: 100%;
+.surfaceImgContainer {
+  width: 100%;
   height: 100%;
   max-width: 20rem;
-  background: linear-gradient(90deg, #0e0e0e00 50%, #f5f5f597 50%, #0e0e0e00 75%);
+  background: linear-gradient(
+    90deg,
+    #0e0e0e00 50%,
+    #f5f5f597 50%,
+    #0e0e0e00 75%
+  );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite linear;
 }
 
-
 @keyframes skeleton-loading {
-    0% {
-        background-position: -200% 0
-    }
-    100% {
-        background-position: 200% 0
-    }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }

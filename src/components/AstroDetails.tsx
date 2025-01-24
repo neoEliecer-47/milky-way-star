@@ -66,8 +66,7 @@ const AstroDetails = ({
                 )}
 
                 {!isImageLoaded && (
-                  <div style={{  zIndex: "-2",
-                    marginTop: "10rem" }}>
+                  <div style={{ zIndex: "-2", marginTop: "10rem" }}>
                     <AstroImageSkeleton />
                   </div>
                 )}

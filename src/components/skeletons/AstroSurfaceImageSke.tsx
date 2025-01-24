@@ -1,11 +1,7 @@
-import styles from './AstroSurfaceImageSke.module.css'
+import styles from "./AstroSurfaceImageSke.module.css";
 
 const AstroSurfaceImageSke = () => {
-  return (
-    <div className={styles.surfaceImgContainer}>
+  return <div className={styles.surfaceImgContainer}></div>;
+};
 
-    </div>
-  )
-}
-
-export default AstroSurfaceImageSke
+export default AstroSurfaceImageSke;

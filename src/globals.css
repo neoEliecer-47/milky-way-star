@@ -1,9 +1,7 @@
 body {
-   
-    overflow: hidden;
-    margin: 0;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
+  overflow: hidden;
+  margin: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
-

@@ -4,7 +4,6 @@ import "./starsApp.css";
 import { generateSpaceLayer } from "./utils";
 import { useEffect, useRef } from "react";
 
-
 const App = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const divRef2 = useRef<HTMLDivElement>(null);
@@ -35,9 +34,8 @@ const App = () => {
       <div ref={divRef} className="space-1" />
       <div ref={divRef2} className="space-1" />
       <div ref={divRef3} className="space-1" />
-      
+
       <CoverflowSlider />
-  
     </div>
   );
 };
