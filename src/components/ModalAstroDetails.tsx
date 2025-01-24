@@ -68,7 +68,10 @@ const ModalAstroDetails = ({
         {astroData.map((data) => (
           <>
             <div className={styles.headerModalContainer}>
-              <AstroSurfaceImage images={data.images} onCloseModal={handleCloseModal}/>
+              <AstroSurfaceImage
+                images={data.images}
+                onCloseModal={handleCloseModal}
+              />
 
               <h1
                 className={styles.name}

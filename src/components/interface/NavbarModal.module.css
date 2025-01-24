@@ -43,8 +43,8 @@
   pointer-events: none;
 }
 
-@media screen and (min-width: 1000px){
-  .navOption{
+@media screen and (min-width: 1000px) {
+  .navOption {
     margin: 0 1rem;
   }
 }

@@ -22,8 +22,9 @@ const StaticData = ({
           : ` ${value}th `;
       return textBefore + positionNumber + textAfterwards;
     }
-    if(textBefore && title === 'temperature') return textBefore + ` ${value}` + textAfterwards
-    if(textBefore) return textBefore + value + textAfterwards
+    if (textBefore && title === "temperature")
+      return textBefore + ` ${value}` + textAfterwards;
+    if (textBefore) return textBefore + value + textAfterwards;
   }
   return (
     <div className={styles.containerData}>

@@ -53,8 +53,8 @@
   margin: 0;
 }
 
-@media screen and (min-width: 1000px){
-  .container{
+@media screen and (min-width: 1000px) {
+  .container {
     margin: 1.2rem 0;
   }
 }

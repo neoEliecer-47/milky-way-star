@@ -3,7 +3,6 @@ import styles from "./AstroSurfaceImage.module.css";
 import CloseIcon from "./icons/CloseIcon";
 
 const AstroSurfaceImage = ({ images, onCloseModal }: modalImagesProps) => {
-  
   return (
     <section style={{ width: "100%" }}>
       <div className={styles.buttonContainer}>

@@ -7,7 +7,7 @@ import ButtonsNextPrevSlider from "./mobile/ButtonsNextPrevSlider";
 
 const CoverflowSlider = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(3);
-  const { isMobile } = useIsMobileScreenDetector()
+  const { isMobile } = useIsMobileScreenDetector();
 
   function handleCLick(index: number) {
     setCurrentIndex(index);
@@ -24,11 +24,13 @@ const CoverflowSlider = () => {
           currentIndex={currentIndex}
           handleCLick={handleCLick}
         />
-         {isMobile && (
-          <ButtonsNextPrevSlider currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-         )}
+        {isMobile && (
+          <ButtonsNextPrevSlider
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          />
+        )}
       </div>
-   
     </div>
   );
 };

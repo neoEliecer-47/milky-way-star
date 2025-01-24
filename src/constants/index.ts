@@ -48,7 +48,8 @@ export const planets: planetsProps[] = [
     imgSrc: sunImg,
     id: 0,
     astroData: [
-      {//every astro data array has only one object: that means only one position -> 0
+      {
+        //every astro data array has only one object: that means only one position -> 0
         id: 0,
         name: "sun",
         type: "yellow dwarf star",
@@ -63,7 +64,8 @@ export const planets: planetsProps[] = [
         images: [{ imgSrc: sunModal1 }, { imgSrc: sunModal2 }],
         surface:
           "the Sun does not hace a solid surface. The part of the sun commonly called its surface is the photosphere",
-        gravity: 'Sun`s gravity is incredibly powerful, about 274 m/s², 27.94 times stronger than Earth`s gravity',
+        gravity:
+          "Sun`s gravity is incredibly powerful, about 274 m/s², 27.94 times stronger than Earth`s gravity",
       },
     ],
   },
@@ -89,7 +91,8 @@ export const planets: planetsProps[] = [
         dayNightCycle: 176,
         age: 4.6,
         images: [{ imgSrc: mercuryModal1 }, { imgSrc: mercuryModal2 }],
-        gravity: 'Mercury`s gravity is 3.7 m/s², 0.38 times weaker than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 27kg on Mercury',
+        gravity:
+          "Mercury`s gravity is 3.7 m/s², 0.38 times weaker than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 27kg on Mercury",
       },
     ],
   }, //should there be anothe array for moons of every planet?
@@ -115,7 +118,8 @@ export const planets: planetsProps[] = [
         dayNightCycle: 60,
         age: 4.6,
         images: [{ imgSrc: venusModal1 }, { imgSrc: venusModal2 }],
-        gravity: 'Venus`s gravity is 8.87 m/s², 0.9 times weaker than Earth`s gravity, that means if you weigh 80kg on Earth, you would weigh 72kg on Venus',
+        gravity:
+          "Venus`s gravity is 8.87 m/s², 0.9 times weaker than Earth`s gravity, that means if you weigh 80kg on Earth, you would weigh 72kg on Venus",
       },
     ],
   },
@@ -143,7 +147,8 @@ export const planets: planetsProps[] = [
         dayNightCycle: 12,
         age: 4.5,
         images: [{ imgSrc: earthModal1 }, { imgSrc: earthModal2 }],
-        gravity: 'Earth`s gravity is 9.8 m/s² compared to the Moon`s gravity which is 1.6 m/s², so if you wiegh 80kg on Earth, you would weigh 13kg on the Moon, incredible right?',
+        gravity:
+          "Earth`s gravity is 9.8 m/s² compared to the Moon`s gravity which is 1.6 m/s², so if you wiegh 80kg on Earth, you would weigh 13kg on the Moon, incredible right?",
       },
     ],
   },
@@ -171,7 +176,8 @@ export const planets: planetsProps[] = [
         rotation: 24.3,
         age: 4.6,
         images: [{ imgSrc: marsModal1 }, { imgSrc: marsModal2 }],
-        gravity: 'Mars`s gravity is about 38% of Earth`s gravity, 3.7 m/s², meaning you`d weigh quite less on Mars',
+        gravity:
+          "Mars`s gravity is about 38% of Earth`s gravity, 3.7 m/s², meaning you`d weigh quite less on Mars",
       },
     ],
   },
@@ -204,7 +210,8 @@ export const planets: planetsProps[] = [
         rotation: 9,
         age: 4.6,
         images: [{ imgSrc: jupiterModal1 }, { imgSrc: jupiterModal2 }],
-        gravity: 'Jupiter`s gravity is 24.79 m/s², 2.53 times stronger than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 177kg on Jupiter, incredible right?',
+        gravity:
+          "Jupiter`s gravity is 24.79 m/s², 2.53 times stronger than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 177kg on Jupiter, incredible right?",
       },
     ],
   },
@@ -239,7 +246,8 @@ export const planets: planetsProps[] = [
         weather:
           "extremely strong winds and storms, with some speeds reaching 1,800 km/h",
         images: [{ imgSrc: saturnModal1 }, { imgSrc: saturnModal2 }],
-        gravity: 'Saturn`s gravity is 10.44 m/s², 1.07 times stronger than Earth`s gravity, meaning you`d weigh 1.07 times more on Saturn',
+        gravity:
+          "Saturn`s gravity is 10.44 m/s², 1.07 times stronger than Earth`s gravity, meaning you`d weigh 1.07 times more on Saturn",
       },
     ],
   },
@@ -273,7 +281,8 @@ export const planets: planetsProps[] = [
         ringSystem:
           "uranus has two sets of ring, the inner system of nine rings, the another one is reddish like dusty.",
         images: [{ imgSrc: uranusModal1 }, { imgSrc: uranusModal2 }],
-        gravity: 'Uranus`s gravity is 8.69 m/s², 0.89 times weaker than Earth`s gravity, meaning you`d weigh 0.89 times less on Uranus',
+        gravity:
+          "Uranus`s gravity is 8.69 m/s², 0.89 times weaker than Earth`s gravity, meaning you`d weigh 0.89 times less on Uranus",
       },
     ],
   },
@@ -304,34 +313,33 @@ export const planets: planetsProps[] = [
         age: 4.5,
         weather: "",
         images: [{ imgSrc: neptuneModal1 }, { imgSrc: neptuneModal2 }],
-        gravity: 'Neptune`s gravity is 11.15 m/s², 1.14 times stronger than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 80kg on Neptune',
+        gravity:
+          "Neptune`s gravity is 11.15 m/s², 1.14 times stronger than Earth`s gravity, that means if you weigh 70kg on Earth, you would weigh 80kg on Neptune",
       },
     ],
   },
 ];
 
 export const astrosTitleColors = [
-  'rgb(224, 180, 35), rgb(247, 84, 20)',
-  'rgba(100, 100, 100, 0.3), rgb(100, 100, 100)',
-  'rgb(231, 100, 34), rgb(194, 69, 6)',
-  'white, rgb(0, 112, 0), blue',
-  'rgb(235, 49, 49), rgb(175, 6, 6)',
-  'white, orange, rgba(247, 165, 118, 0.7)',
-  'rgba(243, 239, 237, 0.92), rgba(247, 165, 118, 0.9), rgba(138, 129, 8, 0.943)',
-  'rgba(118, 200, 206, 0.943),  rgba(135, 136, 190, 0.943)',
-  'blue, rgba(92, 53, 185, 0.943)',
-
-]
-
+  "rgb(224, 180, 35), rgb(247, 84, 20)",
+  "rgba(100, 100, 100, 0.3), rgb(100, 100, 100)",
+  "rgb(231, 100, 34), rgb(194, 69, 6)",
+  "white, rgb(0, 112, 0), blue",
+  "rgb(235, 49, 49), rgb(175, 6, 6)",
+  "white, orange, rgba(247, 165, 118, 0.7)",
+  "rgba(243, 239, 237, 0.92), rgba(247, 165, 118, 0.9), rgba(138, 129, 8, 0.943)",
+  "rgba(118, 200, 206, 0.943),  rgba(135, 136, 190, 0.943)",
+  "blue, rgba(92, 53, 185, 0.943)",
+];
 
 export const astrosShadowColorsModal = [
-  'rgb(224, 180, 35)',
-  'rgb(100, 100, 100)',
-  'rgb(231, 100, 34)',
-  'rgba(9, 211, 46, 0.71)',
-  'rgba(230, 16, 16, 0.78)',
-  'rgba(247, 165, 118, 0.7)',
-  'rgba(138, 129, 8, 0.943)',
-  'rgba(97, 221, 230, 0.84)',
-  'rgba(0, 0, 255, 0.5)',
-]
+  "rgb(224, 180, 35)",
+  "rgb(100, 100, 100)",
+  "rgb(231, 100, 34)",
+  "rgba(9, 211, 46, 0.71)",
+  "rgba(230, 16, 16, 0.78)",
+  "rgba(247, 165, 118, 0.7)",
+  "rgba(138, 129, 8, 0.943)",
+  "rgba(97, 221, 230, 0.84)",
+  "rgba(0, 0, 255, 0.5)",
+];

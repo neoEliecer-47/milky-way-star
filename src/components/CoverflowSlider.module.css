@@ -10,8 +10,6 @@
   perspective: 1000px; /* For 3D effect */
   overflow: hidden;
   position: relative;
-
-
 }
 
 .slides {
@@ -20,8 +18,8 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-   /* transform: translateX(-1.2rem);  */
-   margin-right: 20rem;
+  /* transform: translateX(-1.2rem);  */
+  margin-right: 20rem;
   position: relative;
 }
 
@@ -31,7 +29,7 @@
   left: 50%;
   transform-origin: center center;
   transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
+
   width: 230px;
   height: 500px;
   border-radius: 5rem;
@@ -52,14 +50,18 @@
   content: "";
   width: 100%;
   height: 80%;
-  background: linear-gradient(transparent, #1f1e1e 80%, rgba(230, 13, 13, 0.7) 170%);
+  background: linear-gradient(
+    transparent,
+    #1f1e1e 80%,
+    rgba(230, 13, 13, 0.7) 170%
+  );
   bottom: -6rem;
   opacity: 0;
   z-index: -2;
   transition: all 1.2s ease;
 }
 
-.astroImg{
+.astroImg {
   width: 12.8rem;
   height: 12.8rem;
 }
@@ -78,34 +80,34 @@
   transform: translateY(-2rem);
 }
 
-@media screen and (min-width: 1024px){
-  .slide{
+@media screen and (min-width: 1024px) {
+  .slide {
     height: 500px;
     width: 320px;
   }
 
-  .astroImg{
+  .astroImg {
     height: 20rem;
     width: 20rem;
   }
 
-  .slides{
+  .slides {
     margin-right: 0;
   }
 }
 
-@media screen and (max-width: 377px){
-  .slide{
+@media screen and (max-width: 377px) {
+  .slide {
     height: 26rem;
   }
-  .slides{
+  .slides {
     position: relative;
     left: -22px;
   }
 }
 
-@media screen and (min-width: 1600px){
-  .slides{
+@media screen and (min-width: 1600px) {
+  .slides {
     height: 25rem;
   }
 }

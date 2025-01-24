@@ -10,7 +10,14 @@ const ReadMore = ({ title, text }: readMoreProps) => {
     setHiddenText(!hiddenText);
   }
   return (
-    <section className={classNames(styles.readMoreContainer, title === 'gravity' && styles.gravityStyles)} onClick={toggleReadMore} style={{animation: !hiddenText || title !== 'gravity' ? 'none' : ''}}>
+    <section
+      className={classNames(
+        styles.readMoreContainer,
+        title === "gravity" && styles.gravityStyles
+      )}
+      onClick={toggleReadMore}
+      style={{ animation: !hiddenText || title !== "gravity" ? "none" : "" }}
+    >
       <h1 className={styles.title}>{title}</h1>
 
       <div
@@ -24,7 +31,6 @@ const ReadMore = ({ title, text }: readMoreProps) => {
       >
         {text}
       </div>
-      
     </section>
   );
 };
