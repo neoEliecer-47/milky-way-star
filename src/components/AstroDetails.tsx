@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { astroData, dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
