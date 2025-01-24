@@ -14,7 +14,7 @@ const AstroDetails = ({
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [data, setData] = useState<astroData[]>([]);
   const { isMobile } = useIsMobileScreenDetector()
-  console.log(isMobile)
+
 
   function toggleModal(idAstro: number) {
     const planetsData = dataAstros.filter(({ id }) => id === idAstro);
@@ -91,8 +91,8 @@ const AstroDetails = ({
                   src={imgSrc}
                   alt={astroData[id]?.name}
                   style={{
-                    width: sun ? '400px' : '',
-                    height: sun ? '400px' : '',
+                    width: isMobile && sun ? '280px' : sun ? '400px' : '',
+                    height:  isMobile && sun ? '280px' : sun ? '400px' : '',
                     position: "relative",
                     zIndex: "-2",
                     marginTop: !moons ? "5rem" : "",
