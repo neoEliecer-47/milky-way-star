@@ -1,0 +1,35 @@
+.skeContainer {
+  position: relative;
+  width: 12.8rem;
+  height: 12.8rem;
+  background-color: gray;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(90deg, #0e0e0e00 50%, #f5f5f5 50%, #0e0e0e00 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1s infinite linear
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: -200% 0
+    }
+    100% {
+        background-position: 200% 0
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .skeContainer {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+    .skeContainer {
+      height: 25rem;
+    }
+  }

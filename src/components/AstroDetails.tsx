@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { astroData, dataAstrosProps } from "../types";
 import styles from "./CoverflowSlider.module.css";
 import CustomButton from "./CustomButton";
 import MoonSlider from "./MoonSlider";
 import ModalAstroDetails from "./ModalAstroDetails";
 import useIsMobileScreenDetector from "../hooks/useScreenDetector";
+import AstroImageSkeleton from "./skeletons/AstroImageSkeleton";
 
 const AstroDetails = ({
   dataAstros,
@@ -12,6 +13,7 @@ const AstroDetails = ({
   handleCLick,
 }: dataAstrosProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   const [data, setData] = useState<astroData[]>([]);
   const { isMobile } = useIsMobileScreenDetector();
 
@@ -41,23 +43,6 @@ const AstroDetails = ({
           const scale = buildScale(offset); //larger scale for the active slide
           const zIndex = offset === 0 ? 10 : 5; //higher z-index for the active slide
           const sun = astroData[0].name === "sun";
-          // function buildSize(property: string) {
-          //
-
-          //   if (property === "img") {
-          //     if (isMobile) {
-          //       return "12.8rem";
-          //     }
-          //     return  "20rem";
-          //   }
-
-          //   if(property === 'widthSlider'){
-          //     if (isMobile) {
-          //       return sun ? "250px" : "230px";
-          //     }
-          //     return sun ? "430px" : "320px";
-          //   }
-          // }
 
           return (
             <div style={{ display: "flex", flexDirection: "row" }}>
@@ -80,6 +65,13 @@ const AstroDetails = ({
                   />
                 )}
 
+                {!isImageLoaded && (
+                  <div style={{  zIndex: "-2",
+                    marginTop: "10rem" }}>
+                    <AstroImageSkeleton />
+                  </div>
+                )}
+
                 <img
                   src={imgSrc}
                   alt={astroData[id]?.name}
@@ -89,9 +81,12 @@ const AstroDetails = ({
                     position: "relative",
                     zIndex: "-2",
                     marginTop: !moons ? "5rem" : "",
+                    opacity: !isImageLoaded ? "0" : "1",
                   }}
                   className={styles.astroImg}
+                  onLoad={() => setIsImageLoaded(true)}
                 />
+
                 <div
                   style={{
                     margin: "0px",
